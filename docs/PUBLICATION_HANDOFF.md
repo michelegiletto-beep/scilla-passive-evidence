@@ -1,32 +1,75 @@
-# Publication Handoff - Final DOI-Resolved Workflow
+# Publication Handoff
 
-## Chosen primary DOI workflow
-Use a **manual Zenodo deposit** for Release 1.0.0. This allows a DOI to be reserved while the record is still a draft, so the real DOI can be inserted into the PDF, `CITATION.cff`, README and metadata before publication.
+## Completed canonical publication
 
-For the first release, do not use automatic Zenodo-GitHub ingestion as the primary archive if the goal is to pre-print the DOI inside the technical report. Zenodo documents that DOI pre-reservation is not available through its GitHub integration.
+Zenodo release `1.0.0` is live and citable:
 
-## User sequence
-1. Open Zenodo and create a new upload/draft.
-2. Use the DOI field to reserve a DOI. **Do not publish the Zenodo record yet.**
-3. Reserved DOI received: `10.5281/zenodo.22229086`.
-4. Release promoted from `1.0.0-rc1` to `1.0.0`; DOI inserted into:
-   - technical report PDF/source;
-   - industrial brief;
-   - `CITATION.cff`;
-   - README;
-   - publication metadata.
-5. Upload the final `1.0.0` ZIP into the same Zenodo draft. Preview and verify metadata, then publish.
-6. Create the public GitHub repository from the exact final archive contents.
-7. Add the Zenodo DOI as the canonical citation/archive link.
-8. Run `make test` and `make quick` once from the public repository.
-9. Only after both Zenodo and GitHub resolve correctly, publish the Systems Lab page and LinkedIn technical note.
+- **DOI:** [10.5281/zenodo.22229086](https://doi.org/10.5281/zenodo.22229086)
+- **Resource type:** Software
+- **Version:** `1.0.0`
+- **Publication date:** 2026-09-01
+- **Creator:** Michele Giletto
+- **Visibility:** Public
+- **Archive rights:** strict custom all-rights-reserved notice
+- **Archive SHA-256:** `a28ed77b36eea3d41788a4cfd46d1fb3120823afeab57367b1948e8f1df61805`
 
-## Suggested GitHub repository
-Name: `scilla-passive-evidence`
+The DOI is registered, not merely reserved. Do not edit documentation to describe it as pending.
 
-Description: `Reproducible public research on cue-driven opportunistic maritime verification using non-cooperative merchant-radar illumination. Simulation evidence only; no measured RF performance claimed.`
+## Git handoff design
 
-Suggested topics: `passive-radar`, `maritime-surveillance`, `bistatic-radar`, `sensor-fusion`, `reproducible-research`, `maritime-domain-awareness`, `kalman-filter`, `simulation`
+Repository: [michelegiletto-beep/scilla-passive-evidence](https://github.com/michelegiletto-beep/scilla-passive-evidence)
 
-## Licensing
-No open-source license is included in v1.0.0. Keep `LICENSE` and `RIGHTS_AND_DISCLOSURE.md`. Public GitHub hosting remains subject to GitHub platform terms.
+The required history is:
+
+1. first Git commit contains the exact `1.0.0` Zenodo release tree;
+2. annotated tag `v1.0.0` points to that commit and remains immutable;
+3. subsequent `main` commit contains portability, QA, reproduction, disclosure, and license maintenance;
+4. no force-push or retagging changes the `v1.0.0` boundary;
+5. repository remains private until content, tag, CI, and rights are verified;
+6. visibility changes only after an explicit final action check.
+
+At this handoff, the linked GitHub account resolves to `michelegiletto-beep`, but the GitHub App installation does not yet expose the private repository. Repository authorization, content push, and CI verification are therefore pending.
+
+## Rights split
+
+The Zenodo archive and `v1.0.0` tag retain the original strict all-rights-reserved notice. The maintained `main` branch uses a narrow source-available license allowing one unmodified local copy and non-commercial scientific execution. This later license is not retroactive.
+
+Do not replace the Zenodo file or metadata with the maintained branch. A scientifically promoted correction requires a new version and a new version DOI under the existing Zenodo concept record.
+
+## Candidate boundary
+
+`1.1.0-candidate` corrects the process-noise/rejected-event semantics identified after publication. It remains unpromoted. Candidate output must:
+
+- be version-labeled;
+- remain outside frozen evidence paths;
+- pass nominal, stress, invariance, editorial, and archive QA;
+- never be presented as a silent correction to `1.0.0`.
+
+## Repository settings
+
+- default branch: `main`;
+- Issues: enabled;
+- Wiki, Projects, Discussions: disabled unless a need is demonstrated;
+- homepage: `https://doi.org/10.5281/zenodo.22229086`;
+- do not enable automatic Zenodo archiving for `v1.0.0`, which would create a duplicate archive workflow;
+- preserve branch/tag history;
+- require CI to pass before any future release tag.
+
+Suggested topics:
+
+`passive-radar`, `bistatic-radar`, `marine-radar`, `maritime-surveillance`, `maritime-domain-awareness`, `sensor-fusion`, `extended-kalman-filter`, `reproducible-research`, `research-software`, `simulation`
+
+## Publication sequence from here
+
+1. Authorize the GitHub App installation for the private repository.
+2. Push the exact archive commit and immutable `v1.0.0` tag to the private repository.
+3. Push maintained `main` separately.
+4. Verify commit/tag ancestry, manifest, source scan, tests, frozen nominal replay, full stress replay, and PDF build.
+5. Verify CI from a clean GitHub checkout.
+6. Perform an explicit visibility check, then make the repository public if approved.
+7. Confirm the DOI, repository, README links, and citation resolve without authentication.
+8. Only then advance Systems Lab, LinkedIn, and targeted industrial distribution.
+
+## Stop conditions
+
+Stop publication if the DOI tag differs from the archive, CI does not reproduce the frozen contract, candidate results appear in the `1.0.0` evidence paths, rights notices conflict, credentials or local absolute paths are present, or any measured/operational claim is implied.

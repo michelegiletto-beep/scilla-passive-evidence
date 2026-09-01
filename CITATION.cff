@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this research release, please cite the archived DOI version."
+message: "If you use this research release, cite the immutable Zenodo version."
 title: "SCILLA PASSIVE: Cue-Driven Opportunistic Maritime Verification Using Non-Cooperative Merchant-Radar Illumination"
 type: software
 authors:
@@ -9,12 +9,22 @@ version: "1.0.0"
 date-released: "2026-09-01"
 doi: "10.5281/zenodo.22229086"
 url: "https://doi.org/10.5281/zenodo.22229086"
-abstract: "Reproducible simulation release evaluating cue-driven opportunistic passive maritime second observations using non-cooperative merchant-radar illumination. No measured RF performance is claimed."
+repository-code: "https://github.com/michelegiletto-beep/scilla-passive-evidence"
+abstract: >-
+  Reproducible simulation release evaluating cue-driven opportunistic passive
+  maritime second observations using non-cooperative merchant-radar
+  illumination. The released evidence supports a measurement-architecture
+  hypothesis but does not demonstrate a donor-selection optimizer moat. No
+  measured RF performance is claimed.
 keywords:
-  - passive bistatic radar
-  - maritime surveillance
-  - illuminators of opportunity
-  - commercial marine radar
-  - opportunistic sensing
-  - reproducible simulation
-  - extended Kalman filter
+  - "passive bistatic radar"
+  - "maritime surveillance"
+  - "illuminators of opportunity"
+  - "commercial marine radar"
+  - "opportunistic sensing"
+  - "reproducible simulation"
+  - "extended Kalman filter"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22229086"
+    description: "Canonical immutable release 1.0.0"

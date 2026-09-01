@@ -1,11 +1,75 @@
-SCILLA PASSIVE PUBLIC EVIDENCE RELEASE - PROPRIETARY RIGHTS NOTICE
+SCILLA PASSIVE MAINTAINED SOURCE-AVAILABLE LICENSE
+Version 1.0, 1 September 2026
 
 Copyright (c) 2026 Michele Giletto. All rights reserved.
 
-No permission is granted to copy, modify, distribute, sublicense, sell, or create derivative works from the software, documentation, figures, or data in this release except where mandatory rights arise under applicable law or under the terms of the hosting platform solely for platform operation.
+1. SCOPE
 
-Public availability is intended for scientific review, citation, industrial diligence, and defensive/public disclosure. Public availability does not constitute an open-source license.
+This license applies only to a copy of SCILLA PASSIVE that contains this
+license in the same Git revision (the "Maintained Source"). It does not
+change, replace, or retroactively apply to the published Zenodo Release
+1.0.0, DOI 10.5281/zenodo.22229086, or Git tag v1.0.0. Those immutable
+objects remain governed by the stricter rights notice included with them.
 
-Canonical release DOI: 10.5281/zenodo.22229086
+2. LIMITED NON-COMMERCIAL EVALUATION GRANT
 
-This notice is not legal advice and does not assert patentability or freedom to operate.
+Subject to every condition below, Michele Giletto grants you a personal,
+non-exclusive, non-transferable, non-sublicensable right to:
+
+  a. make one stored local copy of the Maintained Source; and
+  b. execute that copy, without modification, solely to reproduce the
+     published experiments or conduct non-commercial scientific review,
+     education, or evaluation.
+
+Transient copies technically required by an operating system or runtime do
+not count as an additional stored copy. You may cite the work and link to the
+canonical DOI without relying on this grant.
+
+3. CONDITIONS
+
+You must:
+
+  a. preserve this license, copyright notices, DOI, attribution, and rights
+     notices in the copy;
+  b. run the Maintained Source unmodified;
+  c. identify any reported output as reproduced or independently generated,
+     not measured by or endorsed by the author; and
+  d. stop using and delete your stored copy if the grant is terminated.
+
+4. RIGHTS NOT GRANTED
+
+No permission is granted to modify, adapt, translate, merge, distribute,
+publish, upload, mirror, sublicense, sell, rent, provide as a service, create
+derivative works, train a model on, extract a competing dataset from, or use
+the Maintained Source or its outputs for production, operational, procurement,
+safety-critical, product-development, revenue-generating, or other commercial
+purposes.
+
+Public availability does not make the Maintained Source open source, public
+domain, or free of third-party rights. All rights not expressly granted are
+reserved. Any broader use requires prior written permission from Michele
+Giletto.
+
+5. TERMINATION
+
+This grant terminates automatically upon breach. Sections concerning retained
+rights, restrictions, disclaimer, and limitation of liability survive
+termination.
+
+6. NO WARRANTY; LIMITATION OF LIABILITY
+
+THE MAINTAINED SOURCE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, NON-INFRINGEMENT, ACCURACY, OR SAFETY. TO THE MAXIMUM EXTENT
+PERMITTED BY LAW, THE COPYRIGHT HOLDER SHALL NOT BE LIABLE FOR ANY CLAIM,
+DAMAGE, LOSS, OR OTHER LIABILITY ARISING FROM OR RELATED TO THE MAINTAINED
+SOURCE OR ITS USE.
+
+7. RESEARCH AND OPERATIONAL BOUNDARY
+
+The Maintained Source is simulation research. It is not a certified,
+validated, or operational maritime-surveillance system and must not be relied
+upon for navigation, safety, security, targeting, or operational decisions.
+
+This license is not legal advice and makes no representation concerning
+patentability, freedom to operate, export controls, or third-party rights.

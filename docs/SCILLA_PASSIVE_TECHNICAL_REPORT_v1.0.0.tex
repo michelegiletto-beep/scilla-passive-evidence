@@ -1,6 +1,7 @@
 \documentclass[10pt]{article}
 \usepackage[a4paper,margin=22mm]{geometry}
 \usepackage{amsmath,amssymb,booktabs,graphicx,hyperref,longtable,array,microtype,xcolor,float}
+\graphicspath{{../figures/}{figures/}}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black,citecolor=black}
@@ -24,7 +25,7 @@ Given an already uncertain maritime track, can mechanically scanning commercial 
 
 This is narrower than passive wide-area search. The architecture assumes an external cue and treats passive illumination as episodic evidence.
 
-\begin{figure}[H]\centering\includegraphics[width=0.95\linewidth]{/mnt/data/SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01/figures/Fig01_SCILLA_PASSIVE_architecture.png}\caption{Candidate SCILLA PASSIVE evidence architecture.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=0.95\linewidth]{Fig01_SCILLA_PASSIVE_architecture.png}\caption{Candidate SCILLA PASSIVE evidence architecture.}\end{figure}
 
 \section{Prior-art boundary}
 Passive bistatic/multistatic radar, non-cooperative radar illuminators, maritime passive detection, emitter selection and geometry optimization are established research territories. Public experiments have demonstrated maritime target detection using non-cooperative pulse radar illuminators \cite{jie2019}, and emitter selection has been treated explicitly as a passive-radar design problem \cite{stevens2014}. A 2025 study specifically considers heterogeneous S-band commercial marine transmitters for passive multistatic maritime networks \cite{li2025}. SCILLA PASSIVE therefore makes no novelty claim over those foundations.
@@ -57,22 +58,22 @@ State is $x=[p_x,p_y,v_x,v_y]^T$. A conventional constant-velocity EKF is used; 
 Mandatory policies are: no passive update; random usable donor; highest SNR; shortest effective pulse/measurement sigma; and a transparent metrology-conditioned expected posterior covariance policy. A normalized-innovation-squared gate is applied identically to passive policies.
 
 \section{Nominal results}
-\begin{figure}[H]\centering\includegraphics[width=0.88\linewidth]{/mnt/data/SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01/figures/Fig02_nominal_policy_comparison.png}\caption{Nominal 300-world paired simulation. Error bars are bootstrap 95\% intervals on the median.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=0.88\linewidth]{Fig02_nominal_policy_comparison.png}\caption{Nominal 300-world paired simulation. Error bars are bootstrap 95\% intervals on the median.}\end{figure}
 
 The passive architecture produces a large simulated improvement relative to propagation-only. The policy-selection result is much weaker: shortest-pulse and metrology-conditioned selection are statistically and practically close in the paired nominal audit. The central scientific statement is therefore that the modeled value is dominated by obtaining a valid second observation, not by a complex optimizer.
 
 \section{Physics robustness}
 The 54-cell physics grid varies candidate donor count, residual clutter penalty, bistatic RCS sensitivity point and donor-position uncertainty, with 30 worlds per cell. The metrology-conditioned passive architecture beats no-passive in 94.4\% of cells, but beats the best simple donor-selection baseline in only 33.3\%.
 
-\begin{figure}[H]\centering\includegraphics[width=0.85\linewidth]{/mnt/data/SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01/figures/Fig03_physics_robustness.png}\caption{Physics robustness. Values above 1 on the vertical axis favor passive updates.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=0.85\linewidth]{Fig03_physics_robustness.png}\caption{Physics robustness. Values above 1 on the vertical axis favor passive updates.}\end{figure}
 
 Three physics cells produce no median improvement over no-passive. They are preserved rather than removed.
-\begin{figure}[H]\centering\includegraphics[width=0.85\linewidth]{/mnt/data/SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01/figures/Fig04_preserved_failure_regimes.png}\caption{Preserved failure regimes in the audited grid.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=0.85\linewidth]{Fig04_preserved_failure_regimes.png}\caption{Preserved failure regimes in the audited grid.}\end{figure}
 
 \section{Integrity stress}
 A separate 27-cell family injects target heading changes, donor-association errors and delay outliers. The purpose is not to assert real-world failure probabilities; it is to make the evidence architecture confront corrupted measurements. A classical innovation gate is applied equally across policies.
 
-\begin{figure}[H]\centering\includegraphics[width=0.72\linewidth]{/mnt/data/SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01/figures/Fig05_integrity_selection_stress.png}\caption{Selection advantage remains non-robust under integrity stress, reinforcing the negative optimizer result.}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=0.72\linewidth]{Fig05_integrity_selection_stress.png}\caption{Selection advantage remains non-robust under integrity stress, reinforcing the negative optimizer result.}\end{figure}
 
 \section{What is not modeled}
 The simulator omits detailed sea-clutter spectra, multipath impulse responses, exact antenna sidelobes, magnetron pulse-to-pulse phase statistics, ADC saturation, direct-path cancellation residuals, polarization mismatch, aspect-dependent ship RCS dynamics and dense emitter deinterleaving. These are not minor implementation details; they are dominant external falsification gates.

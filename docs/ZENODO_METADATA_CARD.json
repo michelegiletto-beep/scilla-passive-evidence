@@ -1,12 +1,19 @@
 {
   "title": "SCILLA PASSIVE: Cue-Driven Opportunistic Maritime Verification Using Non-Cooperative Merchant-Radar Illumination",
+  "resource_type": "Software",
   "upload_type": "software",
   "creators": [
-    "Michele Giletto"
+    {
+      "name": "Michele Giletto"
+    }
   ],
   "publication_date": "2026-09-01",
   "version": "1.0.0",
   "language": "eng",
+  "doi": "10.5281/zenodo.22229086",
+  "doi_url": "https://doi.org/10.5281/zenodo.22229086",
+  "status": "PUBLISHED",
+  "visibility": "Public",
   "keywords": [
     "passive bistatic radar",
     "maritime surveillance",
@@ -16,10 +23,26 @@
     "opportunistic sensing",
     "reproducible simulation"
   ],
-  "description": "Reproducible research release evaluating cue-driven opportunistic passive maritime second observations using moving non-cooperative merchant-radar illuminators. The release includes a classical EKF baseline, paired simulations, physics and integrity stress grids, preserved failure cases, source code and evidence ledgers. No measured RF performance, operational detection range, patentability, customer traction or acquisition interest is claimed.",
-  "license_note": "Use a Zenodo custom license titled \"All rights reserved - Michele Giletto (2026)\". Do not leave the default CC-BY license if proprietary reuse restrictions are intended.",
-  "doi": "10.5281/zenodo.22229086",
-  "resource_type": "Software",
-  "visibility": "Public",
-  "files_note": "For a Software record intended for Software Heritage archival, upload the single final ZIP archive as the record file."
+  "description": "Reproducible simulation release evaluating cue-driven opportunistic passive maritime second observations using moving non-cooperative merchant-radar illuminators. The evidence supports a measurement-architecture hypothesis but does not demonstrate a donor-selection optimizer moat. No measured RF performance, operational detection range, patentability, customer traction, or acquisition interest is claimed.",
+  "rights": {
+    "title": "All rights reserved - Michele Giletto (2026)",
+    "scope": "Strict rights notice contained in the immutable Zenodo 1.0.0 archive; no permission to copy, modify, distribute, sublicense, sell, or create derivative works except as required by law or platform terms.",
+    "non_retroactivity": "The maintained GitHub source-available license does not alter this archive."
+  },
+  "archive": {
+    "filename": "SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01.zip",
+    "sha256": "a28ed77b36eea3d41788a4cfd46d1fb3120823afeab57367b1948e8f1df61805",
+    "md5": "cd7a2311122596269ddda4aea2650a87"
+  },
+  "repository": {
+    "url": "https://github.com/michelegiletto-beep/scilla-passive-evidence",
+    "handoff_status": "PRIVATE_CONTENT_PENDING",
+    "immutable_tag": "v1.0.0",
+    "maintained_branch": "main"
+  },
+  "candidate": {
+    "model_version": "1.1.0-candidate",
+    "status": "UNPROMOTED",
+    "part_of_doi_release": false
+  }
 }

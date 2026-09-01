@@ -2,6 +2,22 @@
   "release": "1.0.0",
   "date": "2026-09-01",
   "evidence_class": "SIMULATED / DERIVED / PUBLICLY SOURCED",
+  "process_models": {
+    "published_frozen": {
+      "id": "1.0.0",
+      "status": "immutable Zenodo numerical reproduction",
+      "process_noise": "G @ (q^2 I) @ G.T per propagation interval",
+      "rejected_event_behavior": "historical event-time propagation split retained"
+    },
+    "corrected_candidate": {
+      "id": "1.1.0-candidate",
+      "status": "unpromoted simulation candidate; not DOI v1.0.0 evidence",
+      "process_noise": "continuous-white-noise-acceleration semigroup covariance",
+      "rejected_event_behavior": "restore pre-event trajectory when NIS gate rejects"
+    },
+    "library_default": "1.1.0-candidate",
+    "runner_requires_explicit_selection": true
+  },
   "physics": {
     "carrier_hz": 3000000000.0,
     "tx_peak_w": 30000,
@@ -38,7 +54,7 @@
     "process_accel_sigma_mps2": 0.12,
     "nis_gate_1dof": 6.63
   },
-  "measurement_budget": "max one accepted candidate per 1-second decision bucket",
+  "measurement_budget": "max one processed passive candidate per 1-second decision bucket",
   "policies": [
     "NO_PASSIVE",
     "RANDOM",
@@ -46,7 +62,7 @@
     "SHORTEST_PULSE",
     "METROLOGY_CONDITIONED_EIG"
   ],
-  "publication_rule": "No field-performance, detection-range, or novelty claim is inferred from simulation.",
+  "publication_rule": "No field-performance, detection-range, novelty, or corrected-model claim is inferred from simulation or retroactively attached to DOI v1.0.0.",
   "doi": "10.5281/zenodo.22229086",
   "canonical_url": "https://doi.org/10.5281/zenodo.22229086"
 }

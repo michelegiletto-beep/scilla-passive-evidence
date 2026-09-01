@@ -1,11 +1,83 @@
 {
   "release": "1.0.0",
   "doi": "10.5281/zenodo.22229086",
-  "unit_tests": "PASS",
-  "quick_reproduction": "PASS",
-  "pdf_preflight": "PASS",
-  "visual_render_qa": "PASS",
-  "zenodo_status": "READY_TO_UPLOAD_AND_PUBLISH",
-  "technical_report": "docs/SCILLA_PASSIVE_TECHNICAL_REPORT_v1.0.0.pdf",
-  "industrial_brief": "docs/SCILLA_PASSIVE_INDUSTRIAL_BRIEF_v1.0.0.pdf"
+  "doi_url": "https://doi.org/10.5281/zenodo.22229086",
+  "zenodo_status": "PUBLISHED_PUBLIC_IMMUTABLE",
+  "archive": {
+    "filename": "SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01.zip",
+    "sha256": "a28ed77b36eea3d41788a4cfd46d1fb3120823afeab57367b1948e8f1df61805",
+    "manifest_entries_verified_at_release": 47,
+    "rights": "STRICT_ALL_RIGHTS_RESERVED"
+  },
+  "release_qa": {
+    "unit_tests": "PASS",
+    "unit_test_count": 47,
+    "quick_reproduction": "PASS",
+    "legacy_stress_csv_count": 5,
+    "legacy_stress_reproduction": "BYTE_EXACT_PASS",
+    "pdf_preflight": "PASS",
+    "visual_render_qa": "PASS",
+    "technical_report": "docs/SCILLA_PASSIVE_TECHNICAL_REPORT_v1.0.0.pdf",
+    "industrial_brief": "docs/SCILLA_PASSIVE_INDUSTRIAL_BRIEF_v1.0.0.pdf"
+  },
+  "maintained_local_qa": {
+    "unit_tests": "PASS_47",
+    "frozen_quick": "PASS",
+    "frozen_nominal": "PASS_300_PAIRED_WORLDS_PER_POLICY",
+    "legacy_stress_reproduction": "BYTE_EXACT_PASS_5_FILES",
+    "pdf_source_compile": "PASS_TECHNICAL_7_PAGES_INDUSTRIAL_1_PAGE",
+    "repository_manifest": "PASS_60_ENTRIES_SELF_EXCLUDED",
+    "tag_manifest_copy": "BYTE_EXACT_PASS",
+    "credential_and_local_path_scan": "PASS",
+    "git_fsck": "PASS",
+    "clean_local_clone": "PASS",
+    "clean_github_checkout_ci": "PENDING_PRIVATE_PUSH"
+  },
+  "bootstrap_provenance_audit": {
+    "historical_provenance_status": "NOT_IDENTIFIABLE_FROM_RELEASE_ARTIFACTS",
+    "historical_reconstruction_claimed": false,
+    "audit_result": "PASS_WITH_PROVENANCE_LIMITATION",
+    "purpose": "DETERMINISTIC_SENSITIVITY_CHECK_NOT_RECOVERED_PROVENANCE",
+    "algorithm": "NONPARAMETRIC_PERCENTILE_BOOTSTRAP_OF_SAMPLE_MEDIAN",
+    "bit_generator": "NUMPY_PCG64",
+    "base_seed": 20260901,
+    "resamples_per_policy": 10000,
+    "confidence_level": 0.95,
+    "quantile_method": "linear",
+    "policy_stream": "SeedSequence([base_seed, fixed_policy_index])",
+    "policy_streams_separated": true,
+    "frozen_nominal_hashes": "PASS",
+    "paired_seed_sets": "PASS",
+    "nonbootstrap_statistics": "PASS",
+    "published_endpoints_all_exactly_match": false
+  },
+  "git_boundary": {
+    "immutable_tag": "v1.0.0",
+    "tag_policy": "DO_NOT_MOVE_OR_REWRITE",
+    "maintained_branch": "main",
+    "repository": "https://github.com/michelegiletto-beep/scilla-passive-evidence",
+    "visibility": "PRIVATE",
+    "authenticated_account": "michelegiletto-beep",
+    "connector_account_status": "CONFIRMED",
+    "connector_repository_installation": "NOT_VISIBLE_PENDING_APP_AUTHORIZATION",
+    "content_status": "PENDING_PUSH_AND_CI_VERIFICATION",
+    "public_visibility_status": "PENDING"
+  },
+  "maintained_rights": {
+    "license": "SCILLA_PASSIVE_MAINTAINED_SOURCE_AVAILABLE_LICENSE_1.0",
+    "grant": "ONE_UNMODIFIED_LOCAL_COPY_AND_NON_COMMERCIAL_SCIENTIFIC_EXECUTION",
+    "archive_relicensed": false
+  },
+  "scientific_disclosure": {
+    "legacy_model": "1.0.0",
+    "known_issue": "PROCESS_NOISE_PARTITION_AND_REJECTED_EVENT_DEPENDENCE",
+    "legacy_preserved": true,
+    "candidate_model": "1.1.0-candidate",
+    "candidate_status": "UNPROMOTED",
+    "candidate_part_of_doi_release": false,
+    "optimizer_moat": "NOT_DEMONSTRATED",
+    "measured_rf_evidence": "NONE"
+  },
+  "current_gate": "GITHUB_APP_REPOSITORY_ACCESS_PRIVATE_PUSH_CI_AND_PUBLIC_VISIBILITY_PENDING",
+  "overall_audit_result": "PASS_WITH_PROVENANCE_LIMITATION"
 }

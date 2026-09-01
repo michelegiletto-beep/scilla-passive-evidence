@@ -1,63 +1,43 @@
 [
   {
-    "path": ".gitattributes",
-    "sha256": "87ce8c0146da2c2d0209fd59f812a4505ae93db52ac04d1e14a95cec031cefac",
-    "bytes": 170
-  },
-  {
-    "path": ".github/workflows/ci.yml",
-    "sha256": "dead8add4e198aab7a98e5c5a6a3ab7f1c9fd2fc08fb622fb01e633267279b8e",
-    "bytes": 918
-  },
-  {
-    "path": ".gitignore",
-    "sha256": "93d853efd59e6ff7162447241e7d0ae828f18263b966532fc21ee93f11bb1a49",
-    "bytes": 299
-  },
-  {
     "path": "CHANGELOG.md",
-    "sha256": "300356aaa07480d0e2658f9340cbc6832c0fa8748aab860d8153c9a1a4b3e860",
-    "bytes": 3043
+    "sha256": "85f837a7a5e6d78a8b566cf70b87d08aaf372816c79c97ee85aa305470d58b1e",
+    "bytes": 442
   },
   {
     "path": "CITATION.cff",
-    "sha256": "9a0e9621d691af607876e0f0c6097ca2f4544a4c319ff41296f8d17fd32dfad5",
-    "bytes": 1186
+    "sha256": "00ac91e396e7c3da124451516ef87a603597bbb9cfe42650f7657f907bad4953",
+    "bytes": 837
   },
   {
     "path": "LICENSE",
-    "sha256": "01417b050e8f9a620bff510e3669db9112cdab8cfe9579aa082eac5964cb0425",
-    "bytes": 3165
+    "sha256": "fa402063e4300aa0f6cccc3e8c5500a9794ce0e5ee0d92fab5179792b9e855a0",
+    "bytes": 746
   },
   {
     "path": "Makefile",
-    "sha256": "538bcb15a0f04cd5b94ac327ab9974d1bbeed5eb05ab40914c98c70ed5208868",
-    "bytes": 1556
+    "sha256": "3503cf0dcf721b55ab6068aa54fafddb0717a1c95a183c52d6d125a06cb79f42",
+    "bytes": 209
   },
   {
     "path": "README.md",
-    "sha256": "d0e6528265d58427f006254ede5d5f2a96f45c081140fd9f39da5047dd871725",
-    "bytes": 6571
+    "sha256": "b29c5413a449bcbb34b99e13e6ec1da97248a2b548daa9235040ec73ee4230ec",
+    "bytes": 1563
   },
   {
     "path": "RELEASE_INDEX.md",
-    "sha256": "0a10e95a0b880ae697245620bab5aa1820fdb0495c4ee3cffbc820d651821257",
-    "bytes": 3578
+    "sha256": "761cbe4aedcd411f58b71c77d41e98bb2a4ba1245f889586eb0eec0e0d796217",
+    "bytes": 1748
   },
   {
     "path": "RIGHTS_AND_DISCLOSURE.md",
-    "sha256": "b1c88e4b6da52aa7d0bc73ffe344904c6875cef4e69703f624dc1f69ce478556",
-    "bytes": 2224
-  },
-  {
-    "path": "ZENODO_SHA256_MANIFEST_v1.0.0.json",
-    "sha256": "849003a0ef61dabe2c6f77376bb93d10804e59c9391ebb1868c34350f311e7c8",
-    "bytes": 7293
+    "sha256": "a1522cebbce44e3e796a63423c4986304cfae9d29d49c925dfa77b5aace3479c",
+    "bytes": 915
   },
   {
     "path": "config/release_config.json",
-    "sha256": "1f9cbb02d545db36baa9a508f53a4968494b7852352b5bd2fea3e6f79f192af3",
-    "bytes": 2173
+    "sha256": "5225cf61b5f41b57e524422172007f29c31545e1f9cfcff76a3762c14aa6f5ad",
+    "bytes": 1412
   },
   {
     "path": "data/CLAIM_HIERARCHY.csv",
@@ -76,8 +56,8 @@
   },
   {
     "path": "data/TECHNICAL_SOURCE_LEDGER.csv",
-    "sha256": "630836594a361b5ea71b8b85a12bf815b2b80386c34fcc8ad5b3c13eb13deaca",
-    "bytes": 2541
+    "sha256": "cce59bd4899821ccb8878f58ab676aeb175377e455cb6e0badd811ba2eed6e7f",
+    "bytes": 2555
   },
   {
     "path": "docs/CLAIM_HIERARCHY.md",
@@ -91,13 +71,13 @@
   },
   {
     "path": "docs/INDEPENDENT_REPRODUCTION_PROTOCOL.md",
-    "sha256": "a6f3f77ed1b32977cbf8b109261ad14c20cd926e1711f7895304581103c4a4b8",
-    "bytes": 7298
+    "sha256": "d9f2959bd7dd72024c13b6ce3ecb12aaa3a7f963c3712f2336db85fc6c035109",
+    "bytes": 911
   },
   {
     "path": "docs/INDUSTRIAL_DILIGENCE_BRIEF.md",
-    "sha256": "5c0079f1998b212e6b9be5249f838a6ccec819da6a4ff01b95f7ee34b087fc92",
-    "bytes": 4727
+    "sha256": "02e6f3782593256c5e119fbd96d5b401f1c7685a9f40581c375a1131b77c6226",
+    "bytes": 1079
   },
   {
     "path": "docs/MODEL_CARD.md",
@@ -105,14 +85,9 @@
     "bytes": 2209
   },
   {
-    "path": "docs/PROCESS_MODEL_VERSIONING.md",
-    "sha256": "69105c2f03771df09104d1a56e602a58d45a835c7c4a5b931fb31d1b20064617",
-    "bytes": 2423
-  },
-  {
     "path": "docs/PUBLICATION_HANDOFF.md",
-    "sha256": "276814da16cc14a24cc2739dbd144535572b791d9201484f076d9452895ecc80",
-    "bytes": 3838
+    "sha256": "ed67f0b218e26275fdb3f8eeed9adcb980c95df9364689d8aaf7d16b3254de37",
+    "bytes": 1986
   },
   {
     "path": "docs/PUBLICATION_METADATA.md",
@@ -121,8 +96,8 @@
   },
   {
     "path": "docs/PUBLICATION_QA_GATE.md",
-    "sha256": "319e89f893d140527ad0097fcceb2618f45ef5fbff5e3c2595af5e41c85a5d90",
-    "bytes": 4705
+    "sha256": "73385b4637b26b2937fdfaab57a01e438faf3b029efa1e1c23d9806b7e4dbb50",
+    "bytes": 1919
   },
   {
     "path": "docs/SCILLA_PASSIVE_INDUSTRIAL_BRIEF_v1.0.0.pdf",
@@ -141,18 +116,18 @@
   },
   {
     "path": "docs/SCILLA_PASSIVE_TECHNICAL_REPORT_v1.0.0.tex",
-    "sha256": "b1bb47e3f43bdab8c16ebdf95b2093f953e0b010bbbd972aad1f8092f9639c2a",
-    "bytes": 10941
+    "sha256": "dbf141b25bf562164dd6e583d4e86b3ebe4053ba32339808f4413dc07e60bbe3",
+    "bytes": 11277
   },
   {
     "path": "docs/ZENODO_FORM_VALUES.md",
-    "sha256": "0dae5049c27b7a0ab802dd2e71589c6b1bfbf2c54a8dd2b4a8c67590c2251af3",
-    "bytes": 3347
+    "sha256": "c7674eb759635e0d0fb635bcc8b95281c17790c92f288103a5370afdb5ee3b09",
+    "bytes": 3093
   },
   {
     "path": "docs/ZENODO_METADATA_CARD.json",
-    "sha256": "31978545f96ed0e9b9842c8db387d981346ea99f3db630de91aa084474ce0dc0",
-    "bytes": 2104
+    "sha256": "9f3cb0ffcae361d6b0bd3992caf9d0c28e007104ad8e375158c610c2dc4b475b",
+    "bytes": 1406
   },
   {
     "path": "figures/Fig01_SCILLA_PASSIVE_architecture.png",
@@ -180,11 +155,6 @@
     "bytes": 138263
   },
   {
-    "path": "requirements-lock.txt",
-    "sha256": "af2c843237cacbdc1f79438740aa293e2a816a6b4912bd116ee1a57f8e17fefe",
-    "bytes": 106
-  },
-  {
     "path": "requirements.txt",
     "sha256": "ccad70da3cf8b8c936f7276d44c4da01ad25ae060420228a57b546e16327fb5c",
     "bytes": 48
@@ -196,8 +166,8 @@
   },
   {
     "path": "results/FINAL_RELEASE_QA.json",
-    "sha256": "b9a3d4b3a91a5920372162b9cf7ba3761421faf3193038a19655136c5cdb727b",
-    "bytes": 3452
+    "sha256": "eed9a2c6739b516c50159af877ab5e97628d838205da69bd223fe25055a59d32",
+    "bytes": 369
   },
   {
     "path": "results/PRESERVED_FAILURE_v0.json",
@@ -250,53 +220,18 @@
     "bytes": 842509
   },
   {
-    "path": "software/bootstrap_nominal.py",
-    "sha256": "7604f95e18723ad33b261f36570771889e8ca9be08542145b7229575b6ca483a",
-    "bytes": 13584
-  },
-  {
-    "path": "software/build_manifest.py",
-    "sha256": "6380f00fb031ffb3824217201dcbf43544a9a2af6254dbbf84384bd3dbd3aae9",
-    "bytes": 4369
-  },
-  {
-    "path": "software/generate_stress_figures.py",
-    "sha256": "017968ea08f013b67cc4f1aba3e023036d2eb0f74f9d8ff4f20744f49e9be6de",
-    "bytes": 4818
-  },
-  {
     "path": "software/run_release.py",
-    "sha256": "db092586f4ddbb1b647e8bc02b5bfc1734e19102b4c6cebe669e45cf303d427a",
-    "bytes": 7282
-  },
-  {
-    "path": "software/run_stress.py",
-    "sha256": "a37500d3d4ebfd4e780f90c0a4562d42aa380738a8b11a622dafa5d57ffe8512",
-    "bytes": 10498
+    "sha256": "b4f0988ad2aee00e08340d76045ad50a6b0b66a41b276917812795c57d9c6c06",
+    "bytes": 1774
   },
   {
     "path": "software/scilla_passive_core.py",
-    "sha256": "b30ae737e69b09a319c0947c29a1cd1639fb6b5bea639668188ef02c05732870",
-    "bytes": 23066
-  },
-  {
-    "path": "tests/test_bootstrap_reproduction.py",
-    "sha256": "635e5867a1aa1f258225f85b1d3c5ed299625cdf5edcd21563b448e59586837d",
-    "bytes": 4309
+    "sha256": "fe452ceeb34bbc4a0af0e7a2ddba9c09a2e154089f53d378eee3c797d1f45396",
+    "bytes": 7743
   },
   {
     "path": "tests/test_core.py",
-    "sha256": "ecf0d5a074048835ea545c024fe955d4f9ba089ca1f3e875290f91ed02d1085b",
-    "bytes": 12358
-  },
-  {
-    "path": "tests/test_release_contract.py",
-    "sha256": "e87940a7d55114081ae0415f0780c53edf7825ce4cf145843fdef25c2bd489e1",
-    "bytes": 5047
-  },
-  {
-    "path": "tests/test_stress_reproduction.py",
-    "sha256": "8cca05e1cc873ac0a9f541d174f1078ff3a6fc365901e90bd1d0a5ac6cdc2acd",
-    "bytes": 4842
+    "sha256": "4633faa1b52c5cb34f7c54200bed8bf09cc80c438ead62a2121f4a1a78838c9d",
+    "bytes": 846
   }
 ]
