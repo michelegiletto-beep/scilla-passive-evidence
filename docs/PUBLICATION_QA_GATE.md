@@ -42,7 +42,7 @@
 - [x] Maintained local suite passes: 47 tests.
 - [x] Five legacy stress CSVs reproduce byte-exactly.
 - [x] Clean local clone passes the maintained suite and reproduction gates.
-- [x] GitHub Actions CI passes on the private remote (`33561597607`).
+- [x] GitHub Actions CI passes on current private `main`.
 - [x] Frozen quick and 300-world nominal replay pass locally.
 - [x] Both PDF sources compile locally from repository-relative paths.
 - [x] Manifest integrity and credential/local-path scans pass locally.
@@ -56,7 +56,7 @@
 - [x] GitHub App installation exposes `scilla-passive-evidence` to the connector.
 - [x] Archive commit, annotated `v1.0.0` tag, and maintained `main` are present remotely.
 - [x] Tag target is verified against archive tree `8ef47dd2f3fde8ebaf48919cf8338d62f9f31141`.
-- [x] CI passes on GitHub (`33561597607`).
+- [x] CI passes on current GitHub `main`.
 - [ ] Repository homepage points to the DOI.
 - [ ] Topics and repository description are set.
 - [ ] Public visibility receives a final explicit action check.

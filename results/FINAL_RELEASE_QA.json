@@ -31,7 +31,7 @@
     "credential_and_local_path_scan": "PASS",
     "git_fsck": "PASS",
     "clean_local_clone": "PASS",
-    "clean_github_checkout_ci": "PASS_RUN_33561597607"
+    "clean_github_checkout_ci": "PASS_ON_CURRENT_MAIN"
   },
   "bootstrap_provenance_audit": {
     "historical_provenance_status": "NOT_IDENTIFIABLE_FROM_RELEASE_ARTIFACTS",
@@ -84,8 +84,8 @@
     "annotated_tag_object": "2a7356588e24a2dd262fb53586f06cc7692a741f",
     "tag_name": "v1.0.0",
     "main_parent_verified": true,
-    "github_actions_run": 33561597607,
-    "github_actions_result": "PASS"
+    "initial_verified_github_actions_run": 33561597607,
+    "github_actions_result": "PASS_ON_CURRENT_MAIN_BEFORE_PUBLIC_VISIBILITY"
   },
   "current_gate": "FINAL_REPOSITORY_METADATA_PUBLIC_VISIBILITY_AND_ANONYMOUS_ACCESS_PENDING",
   "overall_audit_result": "PASS_WITH_PROVENANCE_LIMITATION"

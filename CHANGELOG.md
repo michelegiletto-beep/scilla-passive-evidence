@@ -19,6 +19,7 @@ All notable repository changes are recorded here. The Zenodo `1.0.0` archive and
 - Hardened output handling and metadata so generated evidence cannot silently overwrite frozen results.
 - Updated publication metadata to identify the DOI as live rather than reserved.
 - Expanded the maintained suite to 47 passing tests; verified all five legacy stress CSVs byte-exactly.
+- Replaced two platform-fragile bit-exact floating-point assertions with an explicit `1e-10` absolute tolerance, far below reported scientific precision; frozen-file hash checks remain exact.
 
 ### Scientific disclosure
 

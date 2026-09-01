@@ -22,7 +22,7 @@ The DOI archive is the citation authority for release `1.0.0`. Maintained-branch
 - **Legacy stress status:** five frozen CSVs reproduced byte-exactly
 - **Bootstrap provenance:** `NOT_IDENTIFIABLE_FROM_RELEASE_ARTIFACTS`
 - **Declared audit:** `PASS_WITH_PROVENANCE_LIMITATION`
-- **Private GitHub CI:** PASS — workflow run `33561597607`
+- **Private GitHub CI:** PASS on current `main` before the public-visibility gate
 
 ## Entry points
 

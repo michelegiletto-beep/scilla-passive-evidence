@@ -318,7 +318,13 @@ class TestFilterAndReplay(unittest.TestCase):
         }
         self.assertEqual([row["policy"] for row in rows], s.POLICIES)
         for row in rows:
-            self.assertEqual(row["position_error_final_m"], expected[row["policy"]])
+            # Different CI runners may differ at the final floating-point ULP.
+            # This tolerance is far below the precision of any reported result.
+            self.assertAlmostEqual(
+                row["position_error_final_m"],
+                expected[row["policy"]],
+                delta=1e-10,
+            )
 
 
 if __name__ == "__main__":

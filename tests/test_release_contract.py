@@ -53,7 +53,9 @@ class TestFrozenReleaseContract(unittest.TestCase):
                 expected = archived[(seed, actual["policy"])]
                 self.assertEqual(list(actual), TRIAL_FIELDS)
                 for field in TRIAL_FIELDS[2:5]:
-                    self.assertEqual(actual[field], float(expected[field]))
+                    self.assertAlmostEqual(
+                        actual[field], float(expected[field]), delta=1e-10
+                    )
                 for field in TRIAL_FIELDS[5:]:
                     self.assertEqual(actual[field], int(expected[field]))
 
