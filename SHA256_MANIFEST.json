@@ -36,13 +36,13 @@
   },
   {
     "path": "README.md",
-    "sha256": "d0e6528265d58427f006254ede5d5f2a96f45c081140fd9f39da5047dd871725",
-    "bytes": 6571
+    "sha256": "5f86d73aa309cba175849ad87e25ca755591904c1fd9f2f81242c78b0bb38d68",
+    "bytes": 6640
   },
   {
     "path": "RELEASE_INDEX.md",
-    "sha256": "0a10e95a0b880ae697245620bab5aa1820fdb0495c4ee3cffbc820d651821257",
-    "bytes": 3578
+    "sha256": "565d60fff219af9132d6198e1ee1cb5f2841a6bac88189879f0fde75509a973a",
+    "bytes": 3684
   },
   {
     "path": "RIGHTS_AND_DISCLOSURE.md",
@@ -111,8 +111,8 @@
   },
   {
     "path": "docs/PUBLICATION_HANDOFF.md",
-    "sha256": "276814da16cc14a24cc2739dbd144535572b791d9201484f076d9452895ecc80",
-    "bytes": 3838
+    "sha256": "52d07e828fb6b4fc879a4a150375955f9b2cced341f3f142f6e145fcc2e63ca7",
+    "bytes": 3698
   },
   {
     "path": "docs/PUBLICATION_METADATA.md",
@@ -121,8 +121,8 @@
   },
   {
     "path": "docs/PUBLICATION_QA_GATE.md",
-    "sha256": "319e89f893d140527ad0097fcceb2618f45ef5fbff5e3c2595af5e41c85a5d90",
-    "bytes": 4705
+    "sha256": "19c7c6446c3911c8e4716e940bbdc6b52499bf57edc8da717fc91d05c0156e75",
+    "bytes": 4672
   },
   {
     "path": "docs/SCILLA_PASSIVE_INDUSTRIAL_BRIEF_v1.0.0.pdf",
@@ -196,8 +196,8 @@
   },
   {
     "path": "results/FINAL_RELEASE_QA.json",
-    "sha256": "b9a3d4b3a91a5920372162b9cf7ba3761421faf3193038a19655136c5cdb727b",
-    "bytes": 3452
+    "sha256": "6412a0294347e899701977275eb4504a9dac2b65c39432c63b3c13e9df501cb4",
+    "bytes": 3817
   },
   {
     "path": "results/PRESERVED_FAILURE_v0.json",

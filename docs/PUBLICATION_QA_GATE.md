@@ -42,27 +42,27 @@
 - [x] Maintained local suite passes: 47 tests.
 - [x] Five legacy stress CSVs reproduce byte-exactly.
 - [x] Clean local clone passes the maintained suite and reproduction gates.
-- [ ] GitHub Actions CI passes on the private remote.
+- [x] GitHub Actions CI passes on the private remote (`33561597607`).
 - [x] Frozen quick and 300-world nominal replay pass locally.
 - [x] Both PDF sources compile locally from repository-relative paths.
 - [x] Manifest integrity and credential/local-path scans pass locally.
 
-**Gate C:** `LOCAL QA PASS WITH PROVENANCE LIMITATION — PRIVATE PUSH/CI PENDING`
+**Gate C:** `PASS WITH PROVENANCE LIMITATION — LOCAL AND PRIVATE REMOTE QA COMPLETE`
 
 ## D. GitHub publication
 
 - [x] Target repository exists: `michelegiletto-beep/scilla-passive-evidence`.
 - [x] GitHub account session resolves to `michelegiletto-beep`.
-- [ ] GitHub App installation exposes `scilla-passive-evidence` to the connector.
-- [ ] Archive commit, `v1.0.0` tag, and maintained `main` are pushed.
-- [ ] Tag target is verified against archive tree.
-- [ ] CI passes on GitHub.
+- [x] GitHub App installation exposes `scilla-passive-evidence` to the connector.
+- [x] Archive commit, annotated `v1.0.0` tag, and maintained `main` are present remotely.
+- [x] Tag target is verified against archive tree `8ef47dd2f3fde8ebaf48919cf8338d62f9f31141`.
+- [x] CI passes on GitHub (`33561597607`).
 - [ ] Repository homepage points to the DOI.
 - [ ] Topics and repository description are set.
 - [ ] Public visibility receives a final explicit action check.
 - [ ] Public anonymous links resolve.
 
-**Gate D:** `HOLD — REPOSITORY APP ACCESS, PRIVATE PUSH, CI, AND PUBLIC VISIBILITY PENDING`
+**Gate D:** `READY FOR FINAL METADATA AND PUBLIC-VISIBILITY GATE`
 
 ## E. Candidate promotion
 
@@ -89,4 +89,4 @@
 
 ## Director decision
 
-Zenodo `1.0.0` remains the public scientific record. Local maintained QA is `PASS_WITH_PROVENANCE_LIMITATION`: 47 tests pass and legacy stress evidence reproduces byte-exactly, but the historical bootstrap procedure is not identifiable from the archive. The linked GitHub account is confirmed, while the repository is not yet visible through the GitHub App installation. Advance only through repository authorization, private GitHub push, and clean-checkout CI. Do not launch broader promotion, claim recovered bootstrap provenance, claim a corrected release, or promote `1.1.0-candidate` until its own gates pass.
+Zenodo `1.0.0` remains the public scientific record. Maintained QA is `PASS_WITH_PROVENANCE_LIMITATION`: 47 tests pass, legacy stress evidence reproduces byte-exactly, the historical bootstrap procedure remains non-identifiable, and private GitHub lineage plus CI are verified. Advance through the explicit public-visibility and anonymous-access gates only. Do not launch broader promotion, claim recovered bootstrap provenance, claim a corrected release, or promote `1.1.0-candidate` until its own gates pass.

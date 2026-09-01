@@ -28,7 +28,7 @@ The required history is:
 5. repository remains private until content, tag, CI, and rights are verified;
 6. visibility changes only after an explicit final action check.
 
-At this handoff, the linked GitHub account resolves to `michelegiletto-beep`, but the GitHub App installation does not yet expose the private repository. Repository authorization, content push, and CI verification are therefore pending.
+The GitHub App installation now exposes the private repository. The archive tree, annotated tag, maintained history, and clean-checkout GitHub Actions run have been verified. Public visibility and anonymous-access checks remain pending.
 
 ## Rights split
 
@@ -61,14 +61,12 @@ Suggested topics:
 
 ## Publication sequence from here
 
-1. Authorize the GitHub App installation for the private repository.
-2. Push the exact archive commit and immutable `v1.0.0` tag to the private repository.
-3. Push maintained `main` separately.
-4. Verify commit/tag ancestry, manifest, source scan, tests, frozen nominal replay, full stress replay, and PDF build.
-5. Verify CI from a clean GitHub checkout.
-6. Perform an explicit visibility check, then make the repository public if approved.
-7. Confirm the DOI, repository, README links, and citation resolve without authentication.
-8. Only then advance Systems Lab, LinkedIn, and targeted industrial distribution.
+1. Preserve the verified archive commit and immutable `v1.0.0` tag.
+2. Preserve maintained `main` and its passing GitHub Actions contract.
+3. Perform an explicit visibility check, then make the repository public if approved.
+4. Confirm the DOI, repository, README links, and citation resolve without authentication.
+5. Add the DOI homepage and approved research topics in repository metadata.
+6. Only then advance Systems Lab, LinkedIn, and targeted industrial distribution.
 
 ## Stop conditions
 
