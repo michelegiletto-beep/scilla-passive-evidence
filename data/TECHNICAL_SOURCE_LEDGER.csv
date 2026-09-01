@@ -1,0 +1,14 @@
+id,source,url,claim_used,evidence_class
+S-001,Furuno FAR-2xx8 current specs,https://www.furuno.com/en/products/radar/far-22x8-bb/index.html,"30 kW S-band, 3050 MHz ±30 MHz, 1.8–2.6° S-band beamwidth, 24/42 rpm",PUBLICLY SOURCED
+S-002,Furuno pulse-mode catalogue,https://www.furuno.sg/wp-content/uploads/2017/06/Furuno-Catalogue-2019.pdf,S1 0.07 us/3000 Hz through L 1.2 us/600 Hz,PUBLICLY SOURCED
+S-003,"Li et al., Sensors 2025",https://www.mdpi.com/1424-8220/25/18/5861,"Commercial marine S-band PMR, 30 kW/3 GHz/1.8°/30 rpm/1000 Hz; receiver placement + localization study",PUBLICLY SOURCED
+S-004,"Jie et al., 2019 experiment",https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/joe.2019.0586,Field demonstration of maritime target detection and 2D mapping using non-cooperative pulse radar illuminator; direct/reference channels; AIS validation,PUBLICLY SOURCED
+S-005,"Aljohani et al., 2020",https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-rsn.2019.0154,Conventional magnetron marine radar is non-coherent; random pulse phase limits Doppler/coherent imaging,PUBLICLY SOURCED
+S-006,"Stevens & Jackson, 2014",https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-rsn.2014.0014,Emitter selection in passive multistatic radar is prior art,PUBLICLY SOURCED
+S-007,"Xie et al., 2017",https://www.mdpi.com/1424-8220/17/6/1378,Joint receiver placement and illuminator selection is prior art,PUBLICLY SOURCED
+S-008,"Greco et al., cognitive radar review",https://arxiv.org/abs/1803.01000,Cognitive passive radar selecting best source for detection/tracking is established prior art,PUBLICLY SOURCED
+S-009,Target localization T/R pair selection,https://www.mdpi.com/2072-4292/13/4/707,Selecting illuminators when approximate target location is known is prior art,PUBLICLY SOURCED
+S-010,USRP N320,https://www.ettus.com/all-products/usrp-n320/,"2 RX, 3 MHz–6 GHz, up to 200 MHz instantaneous BW, 14-bit ADC, FPGA",PUBLICLY SOURCED
+S-011,LimeSDR USB,https://myriadrf.org/projects/limesdr-usb,"2T2R, 100 kHz–3.8 GHz, 61.44 MHz BW/sample rate, 12-bit",PUBLICLY SOURCED
+S-012,USCG AIS Class A,https://www.navcen.uscg.gov/ais-class-a-reports,Class A dynamic position reports every 2–10 s underway,PUBLICLY SOURCED
+S-013,Direct synchronization / beam chasing,https://research.birmingham.ac.uk/en/publications/direct-signal-synchronization-for-staring-passive-bistatic-radar/,Scanning radar illuminators create beam-chasing/reference challenges; direct-signal synchronization is an active research topic,PUBLICLY SOURCED

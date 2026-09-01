@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this research release, please cite the archived DOI version."
+title: "SCILLA PASSIVE: Cue-Driven Opportunistic Maritime Verification Using Non-Cooperative Merchant-Radar Illumination"
+type: software
+authors:
+  - family-names: "Giletto"
+    given-names: "Michele"
+version: "1.0.0"
+date-released: "2026-09-01"
+doi: "10.5281/zenodo.22229086"
+url: "https://doi.org/10.5281/zenodo.22229086"
+abstract: "Reproducible simulation release evaluating cue-driven opportunistic passive maritime second observations using non-cooperative merchant-radar illumination. No measured RF performance is claimed."
+keywords:
+  - passive bistatic radar
+  - maritime surveillance
+  - illuminators of opportunity
+  - commercial marine radar
+  - opportunistic sensing
+  - reproducible simulation
+  - extended Kalman filter

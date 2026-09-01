@@ -1,0 +1,52 @@
+{
+  "release": "1.0.0",
+  "date": "2026-09-01",
+  "evidence_class": "SIMULATED / DERIVED / PUBLICLY SOURCED",
+  "physics": {
+    "carrier_hz": 3000000000.0,
+    "tx_peak_w": 30000,
+    "tx_gain_dbi": 28,
+    "rx_gain_dbi": 15,
+    "beam_deg": 1.8,
+    "rpm": 24,
+    "tx_height_m": 25,
+    "rx_height_m": 30,
+    "target_height_m": 10,
+    "effective_earth_k": 1.3333333333333333
+  },
+  "receiver_model": {
+    "noise_figure_db": 4,
+    "system_loss_db": 10,
+    "processing_loss_db": 3,
+    "detection_threshold_db": 13,
+    "async_sigma_m": 20
+  },
+  "nominal": {
+    "duration_s": 60,
+    "n_donors": 12,
+    "bistatic_rcs_sensitivity_m2": 100,
+    "residual_clutter_penalty_db": 10,
+    "donor_position_sigma_m": 30,
+    "active_probability": 0.75,
+    "maneuver_deg": 0,
+    "association_error_probability": 0,
+    "outlier_probability": 0
+  },
+  "estimator": {
+    "type": "classical EKF",
+    "state": "[px,py,vx,vy]",
+    "process_accel_sigma_mps2": 0.12,
+    "nis_gate_1dof": 6.63
+  },
+  "measurement_budget": "max one accepted candidate per 1-second decision bucket",
+  "policies": [
+    "NO_PASSIVE",
+    "RANDOM",
+    "HIGHEST_SNR",
+    "SHORTEST_PULSE",
+    "METROLOGY_CONDITIONED_EIG"
+  ],
+  "publication_rule": "No field-performance, detection-range, or novelty claim is inferred from simulation.",
+  "doi": "10.5281/zenodo.22229086",
+  "canonical_url": "https://doi.org/10.5281/zenodo.22229086"
+}

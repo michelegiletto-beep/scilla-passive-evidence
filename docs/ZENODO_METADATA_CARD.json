@@ -1,0 +1,25 @@
+{
+  "title": "SCILLA PASSIVE: Cue-Driven Opportunistic Maritime Verification Using Non-Cooperative Merchant-Radar Illumination",
+  "upload_type": "software",
+  "creators": [
+    "Michele Giletto"
+  ],
+  "publication_date": "2026-09-01",
+  "version": "1.0.0",
+  "language": "eng",
+  "keywords": [
+    "passive bistatic radar",
+    "maritime surveillance",
+    "illuminators of opportunity",
+    "commercial marine radar",
+    "multistatic geometry",
+    "opportunistic sensing",
+    "reproducible simulation"
+  ],
+  "description": "Reproducible research release evaluating cue-driven opportunistic passive maritime second observations using moving non-cooperative merchant-radar illuminators. The release includes a classical EKF baseline, paired simulations, physics and integrity stress grids, preserved failure cases, source code and evidence ledgers. No measured RF performance, operational detection range, patentability, customer traction or acquisition interest is claimed.",
+  "license_note": "Use a Zenodo custom license titled \"All rights reserved - Michele Giletto (2026)\". Do not leave the default CC-BY license if proprietary reuse restrictions are intended.",
+  "doi": "10.5281/zenodo.22229086",
+  "resource_type": "Software",
+  "visibility": "Public",
+  "files_note": "For a Software record intended for Software Heritage archival, upload the single final ZIP archive as the record file."
+}

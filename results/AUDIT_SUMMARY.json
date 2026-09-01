@@ -1,0 +1,104 @@
+{
+  "evidence_class": "SIMULATED / DERIVED",
+  "nominal": [
+    {
+      "policy": "HIGHEST_SNR",
+      "n": 300,
+      "median_position_error_m": 25.773354908243864,
+      "median_position_error_ci95_lo": 22.523689383210694,
+      "median_position_error_ci95_hi": 28.013951865855567,
+      "p90_position_error_m": 67.08440310358634,
+      "median_velocity_error_mps": 0.745549146421625,
+      "p90_velocity_error_mps": 1.693448285367057,
+      "median_used_measurements": 46.0,
+      "median_rejected_measurements": 0.0
+    },
+    {
+      "policy": "METROLOGY_CONDITIONED_EIG",
+      "n": 300,
+      "median_position_error_m": 19.169053458182137,
+      "median_position_error_ci95_lo": 16.933937676293183,
+      "median_position_error_ci95_hi": 21.806888955725675,
+      "p90_position_error_m": 45.529288190247044,
+      "median_velocity_error_mps": 0.5716710234369451,
+      "p90_velocity_error_mps": 1.3695716761304524,
+      "median_used_measurements": 46.0,
+      "median_rejected_measurements": 0.0
+    },
+    {
+      "policy": "NO_PASSIVE",
+      "n": 300,
+      "median_position_error_m": 351.4956768129888,
+      "median_position_error_ci95_lo": 327.21061407307144,
+      "median_position_error_ci95_hi": 396.41855760460146,
+      "p90_position_error_m": 640.5184014767387,
+      "median_velocity_error_mps": 1.746037560666358,
+      "p90_velocity_error_mps": 3.1646841301244595,
+      "median_used_measurements": 0.0,
+      "median_rejected_measurements": 0.0
+    },
+    {
+      "policy": "RANDOM",
+      "n": 300,
+      "median_position_error_m": 21.787277266563702,
+      "median_position_error_ci95_lo": 18.93946237872038,
+      "median_position_error_ci95_hi": 23.8313420470809,
+      "p90_position_error_m": 57.37806198882681,
+      "median_velocity_error_mps": 0.6136329028094643,
+      "p90_velocity_error_mps": 1.4545344165914251,
+      "median_used_measurements": 46.0,
+      "median_rejected_measurements": 0.0
+    },
+    {
+      "policy": "SHORTEST_PULSE",
+      "n": 300,
+      "median_position_error_m": 19.5309090236354,
+      "median_position_error_ci95_lo": 17.400115270739796,
+      "median_position_error_ci95_hi": 22.194027382065578,
+      "p90_position_error_m": 46.25786346313625,
+      "median_velocity_error_mps": 0.5927077567280482,
+      "p90_velocity_error_mps": 1.3663284434313256,
+      "median_used_measurements": 46.0,
+      "median_rejected_measurements": 0.0
+    }
+  ],
+  "paired": {
+    "n_paired_worlds": 300,
+    "fraction_scilla_beats_no_passive_per_episode": 0.9966666666666667,
+    "fraction_scilla_beats_shortest_pulse_per_episode": 0.49666666666666665,
+    "median_paired_difference_scilla_minus_no_passive_m": -325.8655416901868,
+    "median_paired_difference_scilla_minus_no_passive_ci95_m": [
+      -376.32996901908,
+      -304.2790770468693
+    ],
+    "median_paired_difference_scilla_minus_shortest_pulse_m": 0.0,
+    "median_paired_difference_scilla_minus_shortest_pulse_ci95_m": [
+      -0.5324232203236292,
+      0.0
+    ]
+  },
+  "physics_robustness": {
+    "scenario_count": 54,
+    "episodes_per_scenario": 30,
+    "fraction_metrology_eig_beats_no_passive": 0.9444444444444444,
+    "fraction_metrology_eig_beats_best_simple": 0.3333333333333333,
+    "failure_scenarios_vs_no_passive": 3
+  },
+  "integrity_stress": {
+    "scenario_count": 27,
+    "episodes_per_scenario": 30,
+    "fraction_metrology_eig_beats_no_passive": 1.0,
+    "fraction_metrology_eig_beats_best_simple": 0.4444444444444444
+  },
+  "model_hardening": [
+    "paired common-world replays across policies",
+    "exact event-time candidate evaluation within 1 s processing budget",
+    "4/3-Earth radar-horizon gating",
+    "Joseph-form covariance update",
+    "chi-square NIS measurement gate applied identically to all passive policies",
+    "maneuver, emitter-association-error and clutter-outlier stress families",
+    "300-world nominal fixture",
+    "30-world robustness cells"
+  ],
+  "interpretation": "The release tests whether opportunistic bistatic measurements can improve an externally cued track under declared assumptions. It does not establish field detection/geolocation performance or a robust donor-selection moat."
+}

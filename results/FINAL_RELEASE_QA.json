@@ -1,0 +1,11 @@
+{
+  "release": "1.0.0",
+  "doi": "10.5281/zenodo.22229086",
+  "unit_tests": "PASS",
+  "quick_reproduction": "PASS",
+  "pdf_preflight": "PASS",
+  "visual_render_qa": "PASS",
+  "zenodo_status": "READY_TO_UPLOAD_AND_PUBLISH",
+  "technical_report": "docs/SCILLA_PASSIVE_TECHNICAL_REPORT_v1.0.0.pdf",
+  "industrial_brief": "docs/SCILLA_PASSIVE_INDUSTRIAL_BRIEF_v1.0.0.pdf"
+}

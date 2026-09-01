@@ -1,0 +1,11 @@
+id,item,evidence_class,status
+E-001,Commercial S-band marine-radar anchors,PUBLICLY SOURCED,Parameter anchors only; not SCILLA measurements
+E-002,Bistatic path / Jacobians / covariance propagation,DERIVED,Standard geometry plus declared implementation
+E-003,Nominal 300-world benchmark,SIMULATED,Paired common-world policy replay
+E-004,54-cell physics robustness grid,SIMULATED,30 worlds per cell
+E-005,27-cell integrity stress grid,SIMULATED,Maneuver + association + outlier stress; 30 worlds per cell
+E-006,Initial failed policy,SIMULATED / PRESERVED FAILURE,Retained to show model development history
+E-007,Real RF return / clutter / association,MEASURED,ABSENT
+E-008,Customer decision economics,EXTERNAL / MEASURED,ABSENT
+E-009,Independent reproduction,EXTERNAL,ABSENT
+E-010,Patentability / freedom to operate,LEGAL / EXTERNAL,NOT ASSERTED

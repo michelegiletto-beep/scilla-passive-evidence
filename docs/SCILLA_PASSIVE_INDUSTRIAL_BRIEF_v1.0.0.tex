@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=18mm]{geometry}\usepackage{booktabs,hyperref,microtype}\usepackage[T1]{fontenc}\usepackage{lmodern}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}\pagestyle{empty}
+\begin{document}
+{\LARGE\textbf{SCILLA PASSIVE}}\\{\large Industrial Evidence Brief - Public Evidence Release 1.0.0}\\[4pt]
+\textbf{Hypothesis.} Use mechanically scanning merchant radars as non-cooperative, moving illumination opportunities for a track that already exists. The product hypothesis is a passive \emph{second-observation} layer, not a replacement radar.
+
+\textbf{Evidence status.} Simulation/public research only. No measured RF performance.\\\textbf{DOI.} \href{https://doi.org/10.5281/zenodo.22229086}{10.5281/zenodo.22229086}.
+
+\begin{center}\begin{tabular}{lrr}\toprule Policy & Median final error & 95\% CI \\\midrule
+No passive & 351.5 m & 327.2--396.4 m\\
+Shortest pulse & 19.5 m & 17.4--22.2 m\\
+Metrology-conditioned EIG & 19.2 m & 16.9--21.8 m\\\bottomrule\end{tabular}\end{center}
+
+\textbf{Hard result.} Passive updates beat propagation-only in 94.4\% of 54 physics stress cells. Three failure cells are preserved.
+
+\textbf{Hard negative result.} The EIG policy does not robustly beat shortest-pulse selection; it wins 49.7\% of paired nominal worlds. \textbf{Optimizer moat not demonstrated.}
+
+\textbf{What remains unproven.} Sea-clutter suppression, direct-path dynamic range, emitter association, real bistatic RCS, field geolocation, customer economics and operational utility.
+
+\textbf{Why an industrial partner matters.} A radar/UAS/surveillance organization already possessing RF labs or archived mission data can close the dominant evidence gap at low marginal cost through independent replay or partner-sponsored receive-only validation.
+
+\textbf{Diligence object.} Frozen equations + simulator + 300-world paired benchmark + 54-cell physics grid + 27-cell integrity grid + preserved failure history + source ledger + reproduction protocol.
+
+\textbf{Next external gate.} Independent reproduction / customer replay / partner-sponsored RF validation.
+
+\textit{No traction, acquisition interest, patentability or field performance is asserted.}
+\end{document}

@@ -1,0 +1,10 @@
+test_bistatic_zero_at_target_on_tx (test_core.TestCore.test_bistatic_zero_at_target_on_tx) ... ok
+test_horizon_positive (test_core.TestCore.test_horizon_positive) ... ok
+test_paired_world (test_core.TestCore.test_paired_world) ... ok
+test_pulse_sigma_order (test_core.TestCore.test_pulse_sigma_order) ... ok
+test_scan_period (test_core.TestCore.test_scan_period) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.004s
+
+OK

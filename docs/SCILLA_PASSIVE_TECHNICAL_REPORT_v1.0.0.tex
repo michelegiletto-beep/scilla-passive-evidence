@@ -1,0 +1,110 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref,longtable,array,microtype,xcolor,float}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black,citecolor=black}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\title{\textbf{SCILLA PASSIVE}\\\large Cue-Driven Opportunistic Maritime Verification Using Non-Cooperative Merchant-Radar Illumination\\\normalsize Public Evidence Release 1.0.0}
+\author{Michele Giletto}
+\date{1 September 2026\\DOI: \href{https://doi.org/10.5281/zenodo.22229086}{10.5281/zenodo.22229086}}
+\begin{document}
+\maketitle
+\begin{center}\fbox{\parbox{0.92\linewidth}{\textbf{Evidence status.} PUBLICLY SOURCED / DERIVED / SIMULATED / PROPOSED. There is no measured SCILLA PASSIVE RF result in this release. No operational detection range, field geolocation accuracy, patentability, customer traction or acquisition interest is claimed.}}\end{center}
+\tableofcontents
+\newpage
+\section{Executive result}
+The audited release supports an architectural hypothesis rather than an algorithmic moat. An externally cued track can benefit substantially from valid opportunistic passive bistatic updates under many declared simulation regimes. However, the metrology-conditioned expected-covariance policy does not robustly outperform a simple shortest-pulse baseline.
+
+In 300 paired nominal simulated worlds, median final position error is 351.5 m without passive updates and 19.2 m with the metrology-conditioned policy. The latter median has a 95\% bootstrap interval of 16.9--21.8 m. A shortest-pulse baseline achieves 19.5 m. On a paired-world basis, the metrology-conditioned policy beats shortest-pulse in only 49.7\% of episodes, with a paired median difference of 0.0 m. Therefore this release explicitly rejects the claim that a sophisticated donor-selection algorithm is presently the moat.
+
+\section{Research question}
+Given an already uncertain maritime track, can mechanically scanning commercial marine radars act as moving, non-cooperative illuminators that provide a useful passive second observation before a more expensive active or electro-optical revisit is consumed?
+
+This is narrower than passive wide-area search. The architecture assumes an external cue and treats passive illumination as episodic evidence.
+
+\begin{figure}[H]\centering\includegraphics[width=0.95\linewidth]{/mnt/data/SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01/figures/Fig01_SCILLA_PASSIVE_architecture.png}\caption{Candidate SCILLA PASSIVE evidence architecture.}\end{figure}
+
+\section{Prior-art boundary}
+Passive bistatic/multistatic radar, non-cooperative radar illuminators, maritime passive detection, emitter selection and geometry optimization are established research territories. Public experiments have demonstrated maritime target detection using non-cooperative pulse radar illuminators \cite{jie2019}, and emitter selection has been treated explicitly as a passive-radar design problem \cite{stevens2014}. A 2025 study specifically considers heterogeneous S-band commercial marine transmitters for passive multistatic maritime networks \cite{li2025}. SCILLA PASSIVE therefore makes no novelty claim over those foundations.
+
+\section{Measurement model}
+For transmitter $T_i$, target state position $p$ and receiver $R$, the excess bistatic path is
+\begin{equation}
+\rho_i(p)=\|p-T_i\|+\|p-R\|-\|T_i-R\|.
+\end{equation}
+The target-position Jacobian is
+\begin{equation}
+g_i=\frac{p-T_i}{\|p-T_i\|}+\frac{p-R}{\|p-R\|}.
+\end{equation}
+For donor-position uncertainty, the transmitter Jacobian is
+\begin{equation}
+J_{T_i}=\frac{T_i-p}{\|T_i-p\|}-\frac{T_i-R}{\|T_i-R\|}.
+\end{equation}
+The effective measurement variance is modeled as
+\begin{equation}
+\sigma_{\rho,i}^2=\sigma_{pulse+async,i}^2+J_{T_i}\Sigma_{T_i}J_{T_i}^{T}.
+\end{equation}
+This avoids treating donor ephemeris error as a geometry-independent scalar penalty.
+
+\section{Commercial radar-mode model}
+The release uses a publicly sourced S-band commercial class as a parameter anchor rather than as a claim about all merchant radars. Pulse modes range from short high-PRF modes to longer low-PRF modes. For a simple unmodulated pulse, the delay-cell scale is proportional to $c\tau_p$, creating a detection-energy versus delay-discrimination trade. A longer pulse can deliver more energy while producing poorer path-sum discrimination. Thus the strongest donor need not be the most useful measurement.
+
+\section{Dynamic simulation}
+State is $x=[p_x,p_y,v_x,v_y]^T$. A conventional constant-velocity EKF is used; no proprietary estimator is required. Candidate donors move with constant velocity and mechanically scan. A standard 4/3-effective-Earth horizon gate is included. All policies replay the same simulated world, initial cue, donor trajectories, measurement noise and physical detections. The measurement budget is capped at one candidate per one-second decision bucket.
+
+Mandatory policies are: no passive update; random usable donor; highest SNR; shortest effective pulse/measurement sigma; and a transparent metrology-conditioned expected posterior covariance policy. A normalized-innovation-squared gate is applied identically to passive policies.
+
+\section{Nominal results}
+\begin{figure}[H]\centering\includegraphics[width=0.88\linewidth]{/mnt/data/SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01/figures/Fig02_nominal_policy_comparison.png}\caption{Nominal 300-world paired simulation. Error bars are bootstrap 95\% intervals on the median.}\end{figure}
+
+The passive architecture produces a large simulated improvement relative to propagation-only. The policy-selection result is much weaker: shortest-pulse and metrology-conditioned selection are statistically and practically close in the paired nominal audit. The central scientific statement is therefore that the modeled value is dominated by obtaining a valid second observation, not by a complex optimizer.
+
+\section{Physics robustness}
+The 54-cell physics grid varies candidate donor count, residual clutter penalty, bistatic RCS sensitivity point and donor-position uncertainty, with 30 worlds per cell. The metrology-conditioned passive architecture beats no-passive in 94.4\% of cells, but beats the best simple donor-selection baseline in only 33.3\%.
+
+\begin{figure}[H]\centering\includegraphics[width=0.85\linewidth]{/mnt/data/SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01/figures/Fig03_physics_robustness.png}\caption{Physics robustness. Values above 1 on the vertical axis favor passive updates.}\end{figure}
+
+Three physics cells produce no median improvement over no-passive. They are preserved rather than removed.
+\begin{figure}[H]\centering\includegraphics[width=0.85\linewidth]{/mnt/data/SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01/figures/Fig04_preserved_failure_regimes.png}\caption{Preserved failure regimes in the audited grid.}\end{figure}
+
+\section{Integrity stress}
+A separate 27-cell family injects target heading changes, donor-association errors and delay outliers. The purpose is not to assert real-world failure probabilities; it is to make the evidence architecture confront corrupted measurements. A classical innovation gate is applied equally across policies.
+
+\begin{figure}[H]\centering\includegraphics[width=0.72\linewidth]{/mnt/data/SCILLA_PASSIVE_PUBLIC_EVIDENCE_RELEASE_v1.0.0_2026-09-01/figures/Fig05_integrity_selection_stress.png}\caption{Selection advantage remains non-robust under integrity stress, reinforcing the negative optimizer result.}\end{figure}
+
+\section{What is not modeled}
+The simulator omits detailed sea-clutter spectra, multipath impulse responses, exact antenna sidelobes, magnetron pulse-to-pulse phase statistics, ADC saturation, direct-path cancellation residuals, polarization mismatch, aspect-dependent ship RCS dynamics and dense emitter deinterleaving. These are not minor implementation details; they are dominant external falsification gates.
+
+\section{Preserved failed model}
+An earlier policy version performed worse than simple baselines and is retained in the release. Its failure helped identify an incorrect treatment of donor-position uncertainty and reinforced the requirement that model development history remain auditable.
+
+\section{Claim hierarchy}
+\textbf{Supported only in the declared simulation:} valid opportunistic passive second observations can materially reduce track error in many regimes, and their usefulness is regime-dependent.
+
+\textbf{Not supported as a moat:} sophisticated donor selection. A simple shortest-pulse baseline is highly competitive.
+
+\textbf{Not measured:} real RF return, clutter suppression, emitter association, bistatic RCS distributions, field geolocation and customer economics.
+
+\textbf{Not asserted:} patentability, freedom to operate, operational readiness or acquisition interest.
+
+\section{Industrial interpretation}
+The strongest product hypothesis is not a passive-radar replacement. It is a cue-driven passive evidence layer for existing surveillance systems, particularly where active dwell, electro-optical pointing, bandwidth, operator attention or emissions are scarce. The next largest evidence increment is external reproduction, customer-data replay or partner-sponsored RF validation.
+
+\section{Reproducibility}
+The release contains frozen configuration, source code, tests, nominal and robustness datasets, confidence intervals and a preserved failure archive. The quick path is `make test` followed by `make quick`. The 300-world nominal result is frozen in the release tables.
+
+\section{Publication and rights boundary}
+This final release contains no open-source license. Public publication would nevertheless disclose technical teaching and can affect future patent rights. European Patent Office guidance defines prior art broadly as information made available to the public before filing \cite{epo2026}. The canonical DOI for this release is \href{https://doi.org/10.5281/zenodo.22229086}{10.5281/zenodo.22229086}.
+
+\section{Conclusion}
+SCILLA PASSIVE survives as a simulation-supported measurement-architecture hypothesis. It does not survive as a claim of a unique passive-radar principle, a field-proven capability or an optimizer moat. That narrowing is the principal result of this final release.
+
+\begin{thebibliography}{9}
+\bibitem{jie2019} J. Song et al., ``Experimental results of maritime moving target detection based on passive bistatic radar using non-cooperative radar illuminators,'' \textit{The Journal of Engineering}, 2019. DOI: 10.1049/joe.2019.0586.
+\bibitem{stevens2014} S. R. Stevens and J. A. Jackson, ``Emitter selection criteria for passive multistatic synthetic aperture radar imaging,'' \textit{IET Radar, Sonar \& Navigation}, vol. 8, no. 9, 2014. DOI: 10.1049/iet-rsn.2014.0014.
+\bibitem{li2025} X. Li, P. He, J. Song, and Z. Wang, ``Receiver Location Optimization for Heterogeneous S-Band Marine Transmitters in Passive Multistatic Radar Networks via NSGA-II,'' \textit{Sensors}, 25(18), 5861, 2025. DOI: 10.3390/s25185861.
+\bibitem{epo2026} European Patent Office, ``Guidelines for Examination, G-IV 1: General remarks and definition,'' 2026.
+\end{thebibliography}
+\end{document}

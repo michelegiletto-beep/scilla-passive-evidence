@@ -1,0 +1,18 @@
+{
+  "evidence_class": "SIMULATED",
+  "nominal_dynamic_fixture": {
+    "episodes_per_policy": 60,
+    "no_passive_median_final_position_error_m": 362.8678310014658,
+    "highest_snr_median_final_position_error_m": 31.10313505119512,
+    "shortest_pulse_median_final_position_error_m": 22.7504740192889,
+    "scilla_validity_gate_median_final_position_error_m": 36.54535585954725,
+    "scilla_validity_gate_median_final_velocity_error_mps": 0.8219855683518367,
+    "scilla_validity_gate_median_measurements": 47.0
+  },
+  "robustness": {
+    "scenario_count": 36,
+    "fraction_scilla_beats_no_passive": 0.75,
+    "fraction_scilla_beats_best_simple_baseline": 0.1388888888888889
+  },
+  "interpretation": "Architecture fixture only; conventional EKF; no measured RF claim."
+}

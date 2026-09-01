@@ -1,0 +1,7 @@
+id,source,url,claim_used
+IP-001,EPO Guidelines G-IV 1 (2026),https://www.epo.org/en/legal/guidelines-epc/2026/g_iv_1.html,Everything made available to the public before filing can enter the state of the art in Europe.
+IP-002,EPO Guidelines G-IV 2 (2026),https://www.epo.org/en/legal/guidelines-epc/2026/g_iv_2.html,A documentary disclosure is prior art when sufficiently enabling for the skilled person.
+PUB-001,Zenodo DOI documentation,https://help.zenodo.org/docs/deposit/describe-records/reserve-doi/,Zenodo permits reserving a DOI before manual publication.
+PUB-002,Zenodo GitHub integration,https://help.zenodo.org/docs/github/enable-repository/,Enabled GitHub repositories can have releases automatically archived by Zenodo.
+PUB-003,GitHub CITATION.cff documentation,https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files,CITATION.cff provides machine-readable citation metadata.
+PUB-004,GitHub licensing documentation,https://docs.github.com/en/enterprise-server@3.21/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository,"Without an additional license, default copyright rules apply; public GitHub use is still subject to GitHub platform terms."

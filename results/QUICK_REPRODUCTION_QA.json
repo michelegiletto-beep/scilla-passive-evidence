@@ -1,0 +1,41 @@
+{
+  "mode": "quick",
+  "elapsed_s": 0.5555706024169922,
+  "summary": {
+    "NO_PASSIVE": {
+      "n": 60,
+      "median_position_error_m": 362.8678310014658,
+      "p90_position_error_m": 567.9095348832484,
+      "median_velocity_error_mps": 1.8869948547578426,
+      "median_used_measurements": 0.0
+    },
+    "RANDOM": {
+      "n": 60,
+      "median_position_error_m": 21.56947157882537,
+      "p90_position_error_m": 46.280202364759404,
+      "median_velocity_error_mps": 0.6607132469770756,
+      "median_used_measurements": 49.0
+    },
+    "HIGHEST_SNR": {
+      "n": 60,
+      "median_position_error_m": 19.971536622005466,
+      "p90_position_error_m": 63.168106092435465,
+      "median_velocity_error_mps": 0.7214165411370295,
+      "median_used_measurements": 49.5
+    },
+    "SHORTEST_PULSE": {
+      "n": 60,
+      "median_position_error_m": 15.294407531624795,
+      "p90_position_error_m": 40.087384721642366,
+      "median_velocity_error_mps": 0.5927077567280482,
+      "median_used_measurements": 49.0
+    },
+    "METROLOGY_CONDITIONED_EIG": {
+      "n": 60,
+      "median_position_error_m": 14.543108153942693,
+      "p90_position_error_m": 34.18145756444865,
+      "median_velocity_error_mps": 0.5336104428225372,
+      "median_used_measurements": 49.0
+    }
+  }
+}

@@ -1,0 +1,6 @@
+claim_id,status,claim
+C1,Supported in declared simulation,A valid opportunistic passive second observation can materially reduce externally cued track error in many modeled regimes.
+C2,Supported in declared simulation,"Performance is sensitive to donor density, residual clutter and bistatic RCS."
+C3,Not supported as a moat,Metrology-conditioned EIG does not robustly outperform the strongest simple pulse-mode baseline.
+C4,Not measured,"Real RF dynamic range, emitter association, clutter suppression, bistatic RCS and field geolocation."
+C5,Not asserted,Patentability / novelty of the integrated architecture.
