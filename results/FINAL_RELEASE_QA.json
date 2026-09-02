@@ -56,12 +56,15 @@
     "tag_policy": "DO_NOT_MOVE_OR_REWRITE",
     "maintained_branch": "main",
     "repository": "https://github.com/michelegiletto-beep/scilla-passive-evidence",
-    "visibility": "PRIVATE",
+    "visibility": "PUBLIC",
     "authenticated_account": "michelegiletto-beep",
     "connector_account_status": "CONFIRMED",
-    "connector_repository_installation": "PASS_PRIVATE_REPOSITORY_VISIBLE",
-    "content_status": "PRIVATE_PUSH_LINEAGE_AND_CI_VERIFIED",
-    "public_visibility_status": "PENDING"
+    "connector_repository_installation": "PASS_REPOSITORY_VISIBLE",
+    "content_status": "PUBLIC_PUSH_LINEAGE_METADATA_AND_CI_VERIFIED",
+    "public_visibility_status": "PASS_EXPLICITLY_AUTHORIZED",
+    "homepage": "https://doi.org/10.5281/zenodo.22229086",
+    "topics_status": "PASS_10_RESEARCH_TOPICS",
+    "anonymous_https_access": "PASS_MAIN_TAG_README_AND_DOI_LINK"
   },
   "maintained_rights": {
     "license": "SCILLA_PASSIVE_MAINTAINED_SOURCE_AVAILABLE_LICENSE_1.0",
@@ -85,8 +88,10 @@
     "tag_name": "v1.0.0",
     "main_parent_verified": true,
     "initial_verified_github_actions_run": 33561597607,
-    "github_actions_result": "PASS_ON_CURRENT_MAIN_BEFORE_PUBLIC_VISIBILITY"
+    "github_actions_result": "PASS_ON_CURRENT_PUBLIC_MAIN",
+    "anonymous_git_refs": "PASS_MAIN_AND_V1.0.0",
+    "anonymous_clean_clone": "PASS_README_AND_DOI_LINK"
   },
-  "current_gate": "FINAL_REPOSITORY_METADATA_PUBLIC_VISIBILITY_AND_ANONYMOUS_ACCESS_PENDING",
+  "current_gate": "GITHUB_PUBLICATION_COMPLETE_SYSTEMS_LAB_PENDING",
   "overall_audit_result": "PASS_WITH_PROVENANCE_LIMITATION"
 }

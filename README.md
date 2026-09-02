@@ -17,7 +17,7 @@ SCILLA PASSIVE is a reproducible simulation study of a narrow question: can a va
 | `main` | Maintained | Portability, QA, reproduction tooling, and explicitly identified candidate corrections | Limited source-available license in the current `LICENSE` |
 | `1.1.0-candidate` model | Unpromoted | Corrected process-model candidate for falsification | Not a released scientific result |
 
-The DOI archive is not retroactively relicensed or changed by later commits on `main`. The GitHub repository has passed private content, lineage, and CI verification; public visibility remains a separate publication gate. The Zenodo record is already the live public citation target.
+The DOI archive is not retroactively relicensed or changed by later commits on `main`. The GitHub repository is public; archive lineage, CI, DOI metadata, and anonymous HTTPS access to `main`, `README.md`, and `v1.0.0` have been verified. The Zenodo record remains the live public citation target.
 
 ## Audited `1.0.0` result
 
@@ -84,7 +84,7 @@ make stress-all
 
 The `frozen-*` and stress-verification paths target the published `1.0.0` semantics. The ordinary `quick` and `nominal` targets exercise `1.1.0-candidate`; their outputs are candidate evidence only. See the independent protocol before comparing results.
 
-Current maintained-branch QA: **47 tests passed**, all five legacy stress CSVs reproduced **byte-exactly**, the private GitHub lineage was verified, and clean-checkout GitHub Actions passed. Public visibility remains pending. The `1.1.0-candidate` model remains unpromoted.
+Current maintained-branch QA: **47 tests passed**, all five legacy stress CSVs reproduced **byte-exactly**, public GitHub lineage and anonymous HTTPS access were verified, and clean-checkout GitHub Actions passed. The `1.1.0-candidate` model remains unpromoted.
 
 To reproduce directly from the immutable tag, check out `v1.0.0` and use that tag's documented `make test`, `make quick`, and `make nominal` targets.
 

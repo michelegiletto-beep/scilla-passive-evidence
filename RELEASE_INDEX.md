@@ -15,14 +15,14 @@ The DOI archive is the citation authority for release `1.0.0`. Maintained-branch
 
 - **Repository:** [michelegiletto-beep/scilla-passive-evidence](https://github.com/michelegiletto-beep/scilla-passive-evidence)
 - **Branch:** `main`
-- **Current handoff:** private repository populated; lineage and GitHub Actions verified; public visibility pending
+- **Current handoff:** public repository live; lineage, DOI metadata, anonymous HTTPS access, and GitHub Actions verified
 - **Rights:** limited source-available license in the current `LICENSE`
 - **Candidate model:** `1.1.0-candidate`, unpromoted
 - **Local test status:** 47 tests passed
 - **Legacy stress status:** five frozen CSVs reproduced byte-exactly
 - **Bootstrap provenance:** `NOT_IDENTIFIABLE_FROM_RELEASE_ARTIFACTS`
 - **Declared audit:** `PASS_WITH_PROVENANCE_LIMITATION`
-- **Private GitHub CI:** PASS on current `main` before the public-visibility gate
+- **Public GitHub CI:** PASS on current `main`
 
 ## Entry points
 

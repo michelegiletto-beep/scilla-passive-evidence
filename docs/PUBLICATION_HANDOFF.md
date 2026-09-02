@@ -25,10 +25,10 @@ The required history is:
 2. annotated tag `v1.0.0` points to that commit and remains immutable;
 3. subsequent `main` commit contains portability, QA, reproduction, disclosure, and license maintenance;
 4. no force-push or retagging changes the `v1.0.0` boundary;
-5. repository remains private until content, tag, CI, and rights are verified;
-6. visibility changes only after an explicit final action check.
+5. repository remained private until content, tag, CI, and rights were verified;
+6. visibility changed only after Michele's explicit final publication instruction.
 
-The GitHub App installation now exposes the private repository. The archive tree, annotated tag, maintained history, and clean-checkout GitHub Actions run have been verified. Public visibility and anonymous-access checks remain pending.
+The repository is now public. The archive tree, annotated tag, maintained history, clean-checkout GitHub Actions run, DOI homepage, topics, and anonymous HTTPS access have been verified. Anonymous checks included remote discovery of `main` and `v1.0.0` plus a clean clone containing the public README and DOI link.
 
 ## Rights split
 
@@ -59,14 +59,14 @@ Suggested topics:
 
 `passive-radar`, `bistatic-radar`, `marine-radar`, `maritime-surveillance`, `maritime-domain-awareness`, `sensor-fusion`, `extended-kalman-filter`, `reproducible-research`, `research-software`, `simulation`
 
-## Publication sequence from here
+## Completed GitHub publication sequence
 
-1. Preserve the verified archive commit and immutable `v1.0.0` tag.
-2. Preserve maintained `main` and its passing GitHub Actions contract.
-3. Perform an explicit visibility check, then make the repository public if approved.
-4. Confirm the DOI, repository, README links, and citation resolve without authentication.
-5. Add the DOI homepage and approved research topics in repository metadata.
-6. Only then advance Systems Lab, LinkedIn, and targeted industrial distribution.
+1. Preserved the verified archive commit and immutable `v1.0.0` tag.
+2. Preserved maintained `main` and its passing GitHub Actions contract.
+3. Received an explicit publication instruction and made the repository public.
+4. Confirmed anonymous HTTPS access to `main`, `v1.0.0`, the README, and its DOI link.
+5. Added the DOI homepage and approved research topics in repository metadata.
+6. Systems Lab, LinkedIn, and targeted industrial distribution remain separate downstream gates.
 
 ## Stop conditions
 
