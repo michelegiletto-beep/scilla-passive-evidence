@@ -1,0 +1,2 @@
+# Optional document-generation dependency; scientific reproduction does not require it.
+reportlab==4.4.9

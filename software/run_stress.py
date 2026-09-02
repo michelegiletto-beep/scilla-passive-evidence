@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Reproduce the frozen SCILLA PASSIVE v1.0.0 stress evidence.
+"""Run SCILLA PASSIVE physics and integrity stress suites.
 
-This runner deliberately selects the legacy v1.0.0 estimator when the core
-offers more than one model.  It therefore exists to reproduce the published
-Zenodo evidence, not to generate results for a later candidate model.
+The default remains the legacy v1.0.0 process model so the published Zenodo
+evidence stays byte-reproducible.  A caller may explicitly select the
+unpromoted ``1.1.0-candidate`` model for a separate falsification run.  Frozen
+verification is intentionally unavailable for candidate output.
 """
 
 from __future__ import annotations
 
 import argparse
 import hashlib
-import inspect
 import itertools
 import json
 import os
@@ -62,25 +62,38 @@ FROZEN_CSV_SHA256 = {
 }
 
 
-def _legacy_kwargs(kwargs: Mapping[str, object]) -> dict[str, object]:
-    """Select v1.0.0 explicitly when a dual-model core is installed."""
+def _model_kwargs(
+    kwargs: Mapping[str, object], model_version: str
+) -> dict[str, object]:
+    """Select the requested process model explicitly for every worker."""
     selected = dict(kwargs)
-    if "model_version" in inspect.signature(core.run_world_all).parameters:
-        selected["model_version"] = getattr(core, "LEGACY_MODEL_VERSION", "1.0.0")
+    selected["model_version"] = model_version
     return selected
 
 
-def _job(item: tuple[int, int, Mapping[str, object]]) -> tuple[int, list[dict[str, object]]]:
-    scenario_id, seed, kwargs = item
-    return scenario_id, core.run_world_all(seed, **_legacy_kwargs(kwargs))
+def _job(
+    item: tuple[int, int, Mapping[str, object], str]
+) -> tuple[int, list[dict[str, object]]]:
+    scenario_id, seed, kwargs, model_version = item
+    return scenario_id, core.run_world_all(
+        seed, **_model_kwargs(kwargs, model_version)
+    )
 
 
 def _jobs(
-    grid: Sequence[Mapping[str, object]], seed_base: int, worlds_per_cell: int
-) -> Iterable[tuple[int, int, Mapping[str, object]]]:
+    grid: Sequence[Mapping[str, object]],
+    seed_base: int,
+    worlds_per_cell: int,
+    model_version: str = core.LEGACY_MODEL_VERSION,
+) -> Iterable[tuple[int, int, Mapping[str, object], str]]:
     for scenario_id, kwargs in enumerate(grid, start=1):
         for world_index in range(worlds_per_cell):
-            yield scenario_id, seed_base + scenario_id * 1000 + world_index, kwargs
+            yield (
+                scenario_id,
+                seed_base + scenario_id * 1000 + world_index,
+                kwargs,
+                model_version,
+            )
 
 
 def _run_grid(
@@ -89,8 +102,9 @@ def _run_grid(
     seed_base: int,
     worlds_per_cell: int,
     workers: int,
+    model_version: str = core.LEGACY_MODEL_VERSION,
 ) -> pd.DataFrame:
-    work = list(_jobs(grid, seed_base, worlds_per_cell))
+    work = list(_jobs(grid, seed_base, worlds_per_cell, model_version))
     if workers == 1:
         completed = map(_job, work)
     else:
@@ -168,8 +182,20 @@ def _write_csv(frame: pd.DataFrame, path: Path) -> None:
     frame.to_csv(path, index=False, lineterminator="\n")
 
 
-def run_physics(out: Path, worlds_per_cell: int, workers: int) -> tuple[Path, Path]:
-    trials = _run_grid(PHYSICS_GRID, PHYSICS_DIMENSIONS, 300_000, worlds_per_cell, workers)
+def run_physics(
+    out: Path,
+    worlds_per_cell: int,
+    workers: int,
+    model_version: str = core.LEGACY_MODEL_VERSION,
+) -> tuple[Path, Path]:
+    trials = _run_grid(
+        PHYSICS_GRID,
+        PHYSICS_DIMENSIONS,
+        300_000,
+        worlds_per_cell,
+        workers,
+        model_version,
+    )
     summary = summarize_scenarios(trials, PHYSICS_DIMENSIONS)
     trials_path = out / "physics_robustness_trials.csv"
     summary_path = out / "physics_robustness_scenario_summary.csv"
@@ -178,11 +204,23 @@ def run_physics(out: Path, worlds_per_cell: int, workers: int) -> tuple[Path, Pa
     return trials_path, summary_path
 
 
-def run_integrity(out: Path, worlds_per_cell: int, workers: int) -> tuple[Path, Path, Path]:
+def run_integrity(
+    out: Path,
+    worlds_per_cell: int,
+    workers: int,
+    model_version: str = core.LEGACY_MODEL_VERSION,
+) -> tuple[Path, Path, Path]:
     fixed = {"n_donors": 12, "clutter_db": 10, "rcs": 100, "donor_sigma": 30}
     grid = tuple({**fixed, **values} for values in INTEGRITY_GRID)
     dimensions = (*PHYSICS_DIMENSIONS, *INTEGRITY_DIMENSIONS)
-    trials = _run_grid(grid, dimensions, 500_000, worlds_per_cell, workers)
+    trials = _run_grid(
+        grid,
+        dimensions,
+        500_000,
+        worlds_per_cell,
+        workers,
+        model_version,
+    )
     summary = summarize_scenarios(trials, INTEGRITY_DIMENSIONS)
     gate = integrity_gate_statistics(trials)
     trials_path = out / "integrity_stress_trials.csv"
@@ -234,6 +272,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--frozen", type=Path, default=Path("results"))
     parser.add_argument("--worlds-per-cell", type=int, default=WORLDS_PER_CELL)
     parser.add_argument("--workers", type=int, default=min(8, os.cpu_count() or 2))
+    parser.add_argument(
+        "--model-version",
+        choices=core.MODEL_VERSIONS,
+        default=core.LEGACY_MODEL_VERSION,
+        help="Process model to stress; candidate output remains unpromoted.",
+    )
     parser.add_argument("--verify-frozen", action="store_true")
     parser.add_argument(
         "--verify-only",
@@ -251,15 +295,40 @@ def main() -> int:
         raise SystemExit("--workers must be positive")
     if (args.verify_frozen or args.verify_only) and args.worlds_per_cell != WORLDS_PER_CELL:
         raise SystemExit("Frozen verification requires exactly 30 worlds per cell")
+    if (args.verify_frozen or args.verify_only) and args.model_version != core.LEGACY_MODEL_VERSION:
+        raise SystemExit("Frozen verification is only valid for model version 1.0.0")
 
     started = time.time()
     if not args.verify_only:
         args.out.mkdir(parents=True, exist_ok=True)
         if args.suite in ("physics", "all"):
-            run_physics(args.out, args.worlds_per_cell, args.workers)
+            run_physics(
+                args.out,
+                args.worlds_per_cell,
+                args.workers,
+                args.model_version,
+            )
         if args.suite in ("integrity", "all"):
-            run_integrity(args.out, args.worlds_per_cell, args.workers)
-        print(f"completed suite={args.suite} in {time.time() - started:.1f}s")
+            run_integrity(
+                args.out,
+                args.worlds_per_cell,
+                args.workers,
+                args.model_version,
+            )
+        elapsed = time.time() - started
+        metadata = {
+            "suite": args.suite,
+            "model_version": args.model_version,
+            "model_status": core.MODELS[args.model_version],
+            "worlds_per_cell": args.worlds_per_cell,
+            "physics_cells": len(PHYSICS_GRID) if args.suite in ("physics", "all") else 0,
+            "integrity_cells": len(INTEGRITY_GRID) if args.suite in ("integrity", "all") else 0,
+            "elapsed_s": elapsed,
+        }
+        (args.out / "RUN_METADATA.json").write_text(
+            json.dumps(metadata, indent=2) + "\n", encoding="utf-8"
+        )
+        print(json.dumps(metadata, indent=2))
 
     if args.verify_frozen or args.verify_only:
         if args.suite != "all":

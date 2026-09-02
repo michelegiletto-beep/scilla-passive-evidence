@@ -1,0 +1,9 @@
+{
+  "suite": "all",
+  "model_version": "1.1.0-candidate",
+  "model_status": "corrected-candidate",
+  "worlds_per_cell": 30,
+  "physics_cells": 54,
+  "integrity_cells": 27,
+  "elapsed_s": 35.70557236671448
+}

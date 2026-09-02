@@ -58,15 +58,36 @@ Post-publication QA identified that the `1.0.0` process-noise discretization can
 
 `main` carries an explicitly named `1.1.0-candidate` correction based on continuous-white-acceleration discretization and rejection-safe propagation. It is **not promoted**, does not replace the DOI evidence, and must not be cited as a validated release until its full nominal, stress, editorial, and archive gates pass.
 
+### Corrected-model audit — architecture conclusion preserved
+
+A complete maintained-branch audit now reruns the corrected candidate on the
+same 300 nominal seeds, all 54 physics cells and all 27 integrity cells. The
+architecture gate is unchanged in every stress cell: **51/54** physics cells
+and **27/27** integrity cells still favour the passive architecture over
+no-passive propagation. Candidate nominal medians remain 351.50 m for
+no-passive, 19.46 m for shortest-pulse and 19.21 m for metrology-conditioned
+EIG.
+
+The optimizer conclusion also remains negative: EIG wins 147/300 paired worlds
+(49.0%), with a paired median difference of 0.0 m. The audit status is
+`PASS_CANDIDATE_NOT_PROMOTED`; it strengthens the simulated architecture
+conclusion without promoting the candidate or creating an RF-performance
+claim. See the [corrected-model audit](docs/CORRECTED_MODEL_AUDIT.md) and its
+[frozen machine-readable evidence](audits/corrected_process_model_2026-09-02/).
+
 ## Start here
 
-1. [Technical report](docs/SCILLA_PASSIVE_TECHNICAL_REPORT_v1.0.0.pdf)
-2. [Executive technical brief](docs/EXECUTIVE_TECHNICAL_BRIEF.md)
-3. [Model card](docs/MODEL_CARD.md)
-4. [Claim hierarchy](docs/CLAIM_HIERARCHY.md)
-5. [Independent reproduction protocol](docs/INDEPENDENT_REPRODUCTION_PROTOCOL.md)
-6. [Industrial diligence brief](docs/INDUSTRIAL_DILIGENCE_BRIEF.md)
-7. [Publication QA gate](docs/PUBLICATION_QA_GATE.md)
+1. [Partner validation dossier](docs/SCILLA_PASSIVE_PARTNER_VALIDATION_DOSSIER_2026-09-02.pdf)
+2. [Corrected process-model audit](docs/CORRECTED_MODEL_AUDIT.md)
+3. [Partner validation protocol](docs/PARTNER_VALIDATION_PROTOCOL.md)
+4. [Integration contract](docs/INTEGRATION_CONTRACT.md)
+5. [Technical report](docs/SCILLA_PASSIVE_TECHNICAL_REPORT_v1.0.0.pdf)
+6. [Executive technical brief](docs/EXECUTIVE_TECHNICAL_BRIEF.md)
+7. [Model card](docs/MODEL_CARD.md)
+8. [Claim hierarchy](docs/CLAIM_HIERARCHY.md)
+9. [Independent reproduction protocol](docs/INDEPENDENT_REPRODUCTION_PROTOCOL.md)
+10. [Industrial diligence brief](docs/INDUSTRIAL_DILIGENCE_BRIEF.md)
+11. [Publication QA gate](docs/PUBLICATION_QA_GATE.md)
 
 ## Reproduction tracks
 
@@ -80,11 +101,19 @@ make frozen-quick
 make frozen-nominal
 python software/bootstrap_nominal.py
 make stress-all
+
+# Corrected candidate audit (kept separate from DOI evidence)
+python software/run_release.py --mode nominal --model-version 1.1.0-candidate --out candidate_nominal --force
+python software/run_stress.py --suite all --model-version 1.1.0-candidate --out candidate_stress
+python software/audit_candidate.py --nominal-dir candidate_nominal --stress-dir candidate_stress --legacy-dir results --out candidate_audit/CORRECTED_MODEL_AUDIT.json
+
+# Optional public partner dossier (requires requirements-docs.txt)
+make partner-dossier
 ```
 
 The `frozen-*` and stress-verification paths target the published `1.0.0` semantics. The ordinary `quick` and `nominal` targets exercise `1.1.0-candidate`; their outputs are candidate evidence only. See the independent protocol before comparing results.
 
-Current maintained-branch QA: **47 tests passed**, all five legacy stress CSVs reproduced **byte-exactly**, public GitHub lineage and anonymous HTTPS access were verified, and clean-checkout GitHub Actions passed. The `1.1.0-candidate` model remains unpromoted.
+Current maintained-branch QA: **48 tests passed**, all five legacy stress CSVs reproduced **byte-exactly**, the complete corrected candidate audit is frozen, public GitHub lineage and anonymous HTTPS access were verified, and clean-checkout GitHub Actions passed before this maintained update. The `1.1.0-candidate` model remains unpromoted.
 
 To reproduce directly from the immutable tag, check out `v1.0.0` and use that tag's documented `make test`, `make quick`, and `make nominal` targets.
 

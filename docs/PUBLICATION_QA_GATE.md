@@ -39,7 +39,7 @@
 - [x] Maintained license and archive rights are clearly separated.
 - [x] Frozen and candidate runner paths are explicitly separated.
 - [x] Full stress regeneration/verification path is documented.
-- [x] Maintained local suite passes: 47 tests.
+- [x] Maintained local suite passes: 48 tests.
 - [x] Five legacy stress CSVs reproduce byte-exactly.
 - [x] Clean local clone passes the maintained suite and reproduction gates.
 - [x] GitHub Actions CI passes on current public `main`.
@@ -70,8 +70,10 @@
 - [x] Legacy and candidate semantics are independently selectable.
 - [x] Candidate process covariance has a defined partition-invariance test.
 - [x] Rejected-event equivalence has a defined test.
-- [ ] Candidate 300-world nominal rerun is frozen.
-- [ ] Candidate physics and integrity stress reruns are frozen.
+- [x] Candidate 300-world nominal rerun is frozen.
+- [x] Candidate physics and integrity stress reruns are frozen.
+- [x] Corrected-model audit reports `PASS_CANDIDATE_NOT_PROMOTED`.
+- [x] Architecture gate is unchanged in all 54 physics and 27 integrity cells.
 - [ ] Paired impact and intervals are independently reviewed.
 - [ ] Technical report/model card are versioned for the candidate result.
 - [ ] New release archive and version DOI are prepared.
@@ -89,4 +91,4 @@
 
 ## Director decision
 
-Zenodo `1.0.0` remains the public scientific record. Maintained QA is `PASS_WITH_PROVENANCE_LIMITATION`: 47 tests pass, legacy stress evidence reproduces byte-exactly, the historical bootstrap procedure remains non-identifiable, and public GitHub lineage, CI, metadata, and anonymous access are verified. The next downstream gate is the Systems Lab publication layer; do not claim recovered bootstrap provenance, claim a corrected release, or promote `1.1.0-candidate` until its own gates pass.
+Zenodo `1.0.0` remains the public scientific record. Maintained QA is `PASS_WITH_PROVENANCE_LIMITATION`: 48 tests pass, legacy stress evidence reproduces byte-exactly, the historical bootstrap procedure remains non-identifiable, and the corrected candidate preserves the qualitative architecture conclusion across the complete frozen nominal and stress design. The next downstream gate is independent review and partner-sponsored replay or measurement; do not claim recovered bootstrap provenance, a corrected released version, or measured RF performance.

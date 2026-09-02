@@ -1,0 +1,119 @@
+{
+  "audit_id": "SCILLA-PASSIVE-CORRECTED-PROCESS-MODEL-2026-09-02",
+  "status": "PASS_CANDIDATE_NOT_PROMOTED",
+  "model_version": "1.1.0-candidate",
+  "model_status": "corrected-candidate",
+  "evidence_class": "SIMULATED",
+  "architecture_conclusion_preserved": true,
+  "nominal": {
+    "policies": {
+      "NO_PASSIVE": {
+        "worlds": 300,
+        "median_final_position_error_m": 351.4956768129888,
+        "p90_final_position_error_m": 640.5184014767387,
+        "median_final_velocity_error_mps": 1.746037560666358,
+        "audit_bootstrap_95_percent_interval_m": [
+          326.33774300682916,
+          396.2889190490672
+        ]
+      },
+      "HIGHEST_SNR": {
+        "worlds": 300,
+        "median_final_position_error_m": 24.93582147125585,
+        "p90_final_position_error_m": 67.13730254608858,
+        "median_final_velocity_error_mps": 0.7324980098450098,
+        "audit_bootstrap_95_percent_interval_m": [
+          22.425930834166486,
+          28.141687573210607
+        ]
+      },
+      "RANDOM": {
+        "worlds": 300,
+        "median_final_position_error_m": 21.959882815463995,
+        "p90_final_position_error_m": 57.72625737601263,
+        "median_final_velocity_error_mps": 0.6321648024277677,
+        "audit_bootstrap_95_percent_interval_m": [
+          19.39811524027668,
+          23.898108785857215
+        ]
+      },
+      "SHORTEST_PULSE": {
+        "worlds": 300,
+        "median_final_position_error_m": 19.456091097223535,
+        "p90_final_position_error_m": 46.661994077625465,
+        "median_final_velocity_error_mps": 0.614324586689301,
+        "audit_bootstrap_95_percent_interval_m": [
+          17.47997437887485,
+          22.33728828325267
+        ]
+      },
+      "METROLOGY_CONDITIONED_EIG": {
+        "worlds": 300,
+        "median_final_position_error_m": 19.207306692136072,
+        "p90_final_position_error_m": 45.01266665822526,
+        "median_final_velocity_error_mps": 0.5920496323380805,
+        "audit_bootstrap_95_percent_interval_m": [
+          16.806527768319185,
+          21.546560770140815
+        ]
+      }
+    },
+    "paired_eig_vs_shortest_pulse": {
+      "eig_better_worlds": 147,
+      "ties": 19,
+      "shortest_pulse_better_worlds": 134,
+      "eig_better_fraction": 0.49,
+      "paired_median_difference_m": 0.0,
+      "audit_bootstrap_95_percent_interval_of_paired_median_m": [
+        -0.5911379235782679,
+        0.02404695703495463
+      ]
+    }
+  },
+  "physics_stress": {
+    "cells": 54,
+    "architecture_beats_no_passive_cells": 51,
+    "architecture_beats_no_passive_fraction": 0.9444444444444444,
+    "eig_beats_best_simple_cells": 19,
+    "eig_beats_best_simple_fraction": 0.35185185185185186,
+    "architecture_gate_cells_changed_vs_v1_0_0": 0,
+    "optimizer_gate_cells_changed_vs_v1_0_0": 1
+  },
+  "integrity_stress": {
+    "cells": 27,
+    "architecture_beats_no_passive_cells": 27,
+    "architecture_beats_no_passive_fraction": 1.0,
+    "eig_beats_best_simple_cells": 10,
+    "eig_beats_best_simple_fraction": 0.37037037037037035,
+    "architecture_gate_cells_changed_vs_v1_0_0": 0,
+    "optimizer_gate_cells_changed_vs_v1_0_0": 4
+  },
+  "bootstrap_contract": {
+    "purpose": "declared candidate audit, not historical v1.0.0 reconstruction",
+    "bit_generator": "NumPy PCG64",
+    "base_seed": 20260902,
+    "resamples": 10000,
+    "confidence_level": 0.95,
+    "quantile_method": "linear"
+  },
+  "input_sha256": {
+    "nominal_trials.csv": "09b1803cb406d865cd55db40a0517fb822a54b96d4ca7e7828ed9e2cc2def5aa",
+    "summary.json": "6ef46a6f57891a2958b7e62c71a25d2a695f65cfdab672f4024da2f65d33daf8",
+    "RUN_METADATA.json": "1da8cfad5ccd5233c6dfcbb8cde1dfe875b79ccbb1332b5b697b57a3094bed3f",
+    "physics_robustness_trials.csv": "05af74c72ec40d055f053ba137a3a2c4525d99cca01e579f5ed0ad4ddcc0f9f7",
+    "physics_robustness_scenario_summary.csv": "69e5730c2f9a1e147288c1a3e1f0e4306cbcb63fc63d190accc2135159a1f6ea",
+    "integrity_stress_trials.csv": "8d3f9895f747af86851489100ab8b133b2fff3ab147ad8943eee0e53ee14f2bc",
+    "integrity_stress_scenario_summary.csv": "42901d21bb46debdd8c1b051c517bfb427dfa093bd874a2a77cd7cea9d8daf05",
+    "integrity_gate_statistics.csv": "84c31aef153e032ff46d28d4c2d5103d2e60de12220ce6e5d3b7dc125a1cabc2"
+  },
+  "claim_boundary": {
+    "supported": "The corrected candidate preserves the qualitative simulated second-observation architecture conclusion on the frozen nominal seeds and stress grids.",
+    "not_supported": [
+      "measured RF performance",
+      "operational detection range",
+      "customer value",
+      "a robust proprietary donor-optimizer advantage",
+      "promotion of 1.1.0-candidate to a released model"
+    ]
+  }
+}

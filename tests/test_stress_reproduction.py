@@ -30,6 +30,28 @@ class TestStressDefinition(unittest.TestCase):
         self.assertEqual((physics[-1][0], physics[-1][1]), (54, 354_029))
         self.assertEqual((integrity[0][0], integrity[0][1]), (1, 501_000))
         self.assertEqual((integrity[-1][0], integrity[-1][1]), (27, 527_029))
+        self.assertEqual(physics[0][3], stress.core.LEGACY_MODEL_VERSION)
+
+    def test_candidate_model_is_explicitly_selectable(self):
+        jobs = list(
+            stress._jobs(
+                stress.PHYSICS_GRID[:1],
+                300_000,
+                1,
+                stress.core.CANDIDATE_MODEL_VERSION,
+            )
+        )
+        self.assertEqual(jobs[0][3], stress.core.CANDIDATE_MODEL_VERSION)
+        candidate = stress._run_grid(
+            stress.PHYSICS_GRID[:1],
+            stress.PHYSICS_DIMENSIONS,
+            300_000,
+            1,
+            1,
+            stress.core.CANDIDATE_MODEL_VERSION,
+        )
+        self.assertEqual(len(candidate), len(stress.core.POLICIES))
+        self.assertTrue((candidate["seed"] == 301_000).all())
 
     def test_first_world_matches_frozen(self):
         generated = stress._run_grid(

@@ -1,8 +1,11 @@
 PYTHON ?= python
 REPRO_OUT ?= reproduction_output
 STRESS_OUT ?= reproduction_stress
+CANDIDATE_NOMINAL_OUT ?= candidate_nominal
+CANDIDATE_STRESS_OUT ?= candidate_stress
+CANDIDATE_AUDIT_OUT ?= candidate_audit/CORRECTED_MODEL_AUDIT.json
 
-.PHONY: test quick nominal frozen-quick frozen-nominal stress-physics \
+.PHONY: test quick nominal frozen-quick frozen-nominal candidate-stress candidate-audit partner-dossier stress-physics \
 	stress-integrity stress-figures stress-verify stress-all manifest manifest-check \
 	bootstrap-audit
 
@@ -14,6 +17,15 @@ quick:
 
 nominal:
 	$(PYTHON) software/run_release.py --mode nominal --model-version 1.1.0-candidate --out $(REPRO_OUT) --force
+
+candidate-stress:
+	$(PYTHON) software/run_stress.py --suite all --model-version 1.1.0-candidate --out $(CANDIDATE_STRESS_OUT)
+
+candidate-audit:
+	$(PYTHON) software/audit_candidate.py --nominal-dir $(CANDIDATE_NOMINAL_OUT) --stress-dir $(CANDIDATE_STRESS_OUT) --legacy-dir results --out $(CANDIDATE_AUDIT_OUT)
+
+partner-dossier:
+	$(PYTHON) software/generate_partner_dossier.py
 
 frozen-quick:
 	$(PYTHON) software/run_release.py --mode quick --model-version 1.0.0 --out $(REPRO_OUT) --force
