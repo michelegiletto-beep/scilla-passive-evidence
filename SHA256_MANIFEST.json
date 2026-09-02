@@ -16,8 +16,8 @@
   },
   {
     "path": "CHANGELOG.md",
-    "sha256": "593adf42f40cc9ad8a3a8ed42bb558e2a1436e991a5a3ccef4c6fb97ebedc9a0",
-    "bytes": 3235
+    "sha256": "fcac8da6eaa3dd51cf7f7a3740cbf388f2847ae82aa33ab9f19a781b6952b865",
+    "bytes": 3840
   },
   {
     "path": "CITATION.cff",
@@ -31,13 +31,13 @@
   },
   {
     "path": "Makefile",
-    "sha256": "538bcb15a0f04cd5b94ac327ab9974d1bbeed5eb05ab40914c98c70ed5208868",
-    "bytes": 1556
+    "sha256": "4f7ccbc2f726afa6bad6989b0200243ac18b96b13dce726a5e23a7353d0a2cb8",
+    "bytes": 2131
   },
   {
     "path": "README.md",
-    "sha256": "5d0d32b112fbef36bac6ba53cb1fce144e767c717974f10aea21ece0408a2d7b",
-    "bytes": 6642
+    "sha256": "582716b85654993a51e4e913901c7bb89b558d6398000aee5cf31f77f7d93e16",
+    "bytes": 8514
   },
   {
     "path": "RELEASE_INDEX.md",
@@ -53,6 +53,61 @@
     "path": "ZENODO_SHA256_MANIFEST_v1.0.0.json",
     "sha256": "849003a0ef61dabe2c6f77376bb93d10804e59c9391ebb1868c34350f311e7c8",
     "bytes": 7293
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/CORRECTED_MODEL_AUDIT.json",
+    "sha256": "665a88e36a56d78af62b5c480bbc2beaa28a5327da4afd6ee99101f86b7161d4",
+    "bytes": 4672
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/README.md",
+    "sha256": "783615ec37823aa407d833aa727b389e9cbdfef18db01e4d2171da62063487dd",
+    "bytes": 2546
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/SHA256SUMS.txt",
+    "sha256": "206fe14f6190b39ce49fee91c7442a508678a727164f533fd8b386b09a6835d5",
+    "bytes": 913
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/nominal/nominal_trials.csv",
+    "sha256": "09b1803cb406d865cd55db40a0517fb822a54b96d4ca7e7828ed9e2cc2def5aa",
+    "bytes": 135582
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/nominal/summary.json",
+    "sha256": "6ef46a6f57891a2958b7e62c71a25d2a695f65cfdab672f4024da2f65d33daf8",
+    "bytes": 1362
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/stress/RUN_METADATA.json",
+    "sha256": "1da8cfad5ccd5233c6dfcbb8cde1dfe875b79ccbb1332b5b697b57a3094bed3f",
+    "bytes": 207
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/stress/integrity_gate_statistics.csv",
+    "sha256": "84c31aef153e032ff46d28d4c2d5103d2e60de12220ce6e5d3b7dc125a1cabc2",
+    "bytes": 6107
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/stress/integrity_stress_scenario_summary.csv",
+    "sha256": "42901d21bb46debdd8c1b051c517bfb427dfa093bd874a2a77cd7cea9d8daf05",
+    "bytes": 3734
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/stress/integrity_stress_trials.csv",
+    "sha256": "8d3f9895f747af86851489100ab8b133b2fff3ab147ad8943eee0e53ee14f2bc",
+    "bytes": 472994
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/stress/physics_robustness_scenario_summary.csv",
+    "sha256": "69e5730c2f9a1e147288c1a3e1f0e4306cbcb63fc63d190accc2135159a1f6ea",
+    "bytes": 7250
+  },
+  {
+    "path": "audits/corrected_process_model_2026-09-02/stress/physics_robustness_trials.csv",
+    "sha256": "05af74c72ec40d055f053ba137a3a2c4525d99cca01e579f5ed0ad4ddcc0f9f7",
+    "bytes": 842588
   },
   {
     "path": "config/release_config.json",
@@ -85,6 +140,11 @@
     "bytes": 994
   },
   {
+    "path": "docs/CORRECTED_MODEL_AUDIT.md",
+    "sha256": "647de603f52eb48e5c05b51b63d13706420af6c1f9ebb3dc4a99dc7aaeb34fd5",
+    "bytes": 3473
+  },
+  {
     "path": "docs/EXECUTIVE_TECHNICAL_BRIEF.md",
     "sha256": "31c075efb12324b48e488beed2ed347f729b523b64329f83e042385a72e3651c",
     "bytes": 2100
@@ -100,9 +160,19 @@
     "bytes": 4727
   },
   {
+    "path": "docs/INTEGRATION_CONTRACT.md",
+    "sha256": "3f12ddbb2c86e0b7961d6562e9268bd81737002fd55ad1931718c4aff94f4e4a",
+    "bytes": 4237
+  },
+  {
     "path": "docs/MODEL_CARD.md",
     "sha256": "db8a25595246facc485736d1b22487a7429e22c5ade9ea7cf33fbfec80403459",
     "bytes": 2209
+  },
+  {
+    "path": "docs/PARTNER_VALIDATION_PROTOCOL.md",
+    "sha256": "aab3a8239159942c453f2bb32536cac157cb93e649bc8eaa3ba6832f83ca7187",
+    "bytes": 5793
   },
   {
     "path": "docs/PROCESS_MODEL_VERSIONING.md",
@@ -121,8 +191,8 @@
   },
   {
     "path": "docs/PUBLICATION_QA_GATE.md",
-    "sha256": "95520c17d4769f29131950749f81eb62ceb83a409e86874f6b65fadf519bbc9e",
-    "bytes": 4699
+    "sha256": "81b4c79e0fb157c52d11ea4f0d70365f0f6ceca82befcc210d6e2a2ad0c210d7",
+    "bytes": 4906
   },
   {
     "path": "docs/SCILLA_PASSIVE_INDUSTRIAL_BRIEF_v1.0.0.pdf",
@@ -133,6 +203,11 @@
     "path": "docs/SCILLA_PASSIVE_INDUSTRIAL_BRIEF_v1.0.0.tex",
     "sha256": "dba6c56345b39f7d36fbfa4b67c3adae015fc45d66232b013b9d8490e3421e58",
     "bytes": 2218
+  },
+  {
+    "path": "docs/SCILLA_PASSIVE_PARTNER_VALIDATION_DOSSIER_2026-09-02.pdf",
+    "sha256": "fa720a23abd26dab21891c94fa5e7f98f668d913c2afd4db680017409c91ab75",
+    "bytes": 105062
   },
   {
     "path": "docs/SCILLA_PASSIVE_TECHNICAL_REPORT_v1.0.0.pdf",
@@ -178,6 +253,11 @@
     "path": "figures/Fig05_integrity_selection_stress.png",
     "sha256": "9360c1d4291f7dc99f20c9d6297bb36a2352ec40b069c31a7a1fcb271dfe1349",
     "bytes": 138263
+  },
+  {
+    "path": "requirements-docs.txt",
+    "sha256": "4f3b542c35b192652c5284cd0250a9c14c24367c0bda1f83dd36f80e6ecb6a8a",
+    "bytes": 105
   },
   {
     "path": "requirements-lock.txt",
@@ -250,6 +330,11 @@
     "bytes": 842509
   },
   {
+    "path": "software/audit_candidate.py",
+    "sha256": "0a4d9b74ee7543e9cb193f6443fe3ce57b396f7a29358d0a4f3ad16ffb18a92b",
+    "bytes": 9927
+  },
+  {
     "path": "software/bootstrap_nominal.py",
     "sha256": "7604f95e18723ad33b261f36570771889e8ca9be08542145b7229575b6ca483a",
     "bytes": 13584
@@ -258,6 +343,11 @@
     "path": "software/build_manifest.py",
     "sha256": "6380f00fb031ffb3824217201dcbf43544a9a2af6254dbbf84384bd3dbd3aae9",
     "bytes": 4369
+  },
+  {
+    "path": "software/generate_partner_dossier.py",
+    "sha256": "06cace85878d1914a6d2d4be84056b88db6c02124c2189ab478667641586faef",
+    "bytes": 25929
   },
   {
     "path": "software/generate_stress_figures.py",
@@ -271,8 +361,8 @@
   },
   {
     "path": "software/run_stress.py",
-    "sha256": "a37500d3d4ebfd4e780f90c0a4562d42aa380738a8b11a622dafa5d57ffe8512",
-    "bytes": 10498
+    "sha256": "a96ee05efdc8456159a992b709ce7fc15bf2cdc6ff703031109f5305ca5f80cb",
+    "bytes": 12206
   },
   {
     "path": "software/scilla_passive_core.py",
@@ -296,7 +386,7 @@
   },
   {
     "path": "tests/test_stress_reproduction.py",
-    "sha256": "8cca05e1cc873ac0a9f541d174f1078ff3a6fc365901e90bd1d0a5ac6cdc2acd",
-    "bytes": 4842
+    "sha256": "b069f42e74602d99209430564e421e4cf2cc34519608c505d0cfb460c29a29c3",
+    "bytes": 5615
   }
 ]
